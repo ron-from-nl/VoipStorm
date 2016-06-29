@@ -1,5 +1,5 @@
 # VoipStorm
-Voipstorm is fast tele voice / marketing messenger delivering up to 20,000 phone-messages per hour right from your desktop!.
+Voipstorm is fast telemarketing / voicemessenger delivering up to 20,000 phone-messages per hour from your desktop!.
 
 VoipStorm is a fairly large and complex application which consists of 3 major components
 
