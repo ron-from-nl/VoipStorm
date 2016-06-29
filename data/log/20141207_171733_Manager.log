@@ -1,0 +1,21 @@
+2014-12-07 17:17:35 serviceTimelineTimer          Scheduled immediate at 1 Sec Interval
+2014-12-07 17:17:35 updateManagerDashboardTimer   Scheduled immediate at 30 Sec Interval
+2014-12-07 17:17:36 JavaDB Database Server Starting...
+2014-12-07 17:17:40 JavaDB Database Server Waiting for Completion...
+2014-12-07 17:17:45 JavaDB Database Server Running
+2014-12-07 17:17:46 JavaDB Database Client Connection Opened
+2014-12-07 17:17:47 JavaDB Database Server Ready for Connections
+2014-12-07 17:17:47 JavaDB Database Client Connection Established
+2014-12-07 17:17:47 JavaDB Database Client Created table: Customer
+2014-12-07 17:17:47 JavaDB Database Client Created table: Reseller
+2014-12-07 17:17:47 JavaDB Database Client Created table: CustomerOrder
+2014-12-07 17:17:47 JavaDB Database Client Created table: Campaign
+2014-12-07 17:17:47 JavaDB Database Client Created table: Destination
+2014-12-07 17:17:47 JavaDB Database Client Created table: CampaignStat
+2014-12-07 17:17:47 JavaDB Database Client Created table: Invoice
+2014-12-07 17:17:48 JavaDB Database Client Created table: Pricelist
+2014-12-07 17:17:48 JavaDB Database Client Created VoipStorm Database
+2014-12-07 17:17:48 Loading Configuration...
+2014-12-07 17:17:48 Configuration Loaded Successfully
+2014-12-07 17:17:48 Verifying License, please wait...
+2014-12-07 17:17:48 ECallCenter21 not Licensed

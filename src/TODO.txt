@@ -1,0 +1,39 @@
+implement ICE protocol (and perhaps TLS)
+
+SessionDescription.getConnection().getAddress() doesn't work on linux and windows7 This is a bug according Ranganathan
+Workaround in SoftPhone:
+ViaHeader tmpViaHeader = (ViaHeader) response.getHeader("Via"); answerSDPInfo.setIPAddress(tmpViaHeader.getReceived()); // Workaround solution for SessionDescription.getConnection().getAddress() bug
+ViaHeader tmpViaHeader = (ViaHeader) request.getHeader("Via"); offerSDPInfo.setIPAddress(tmpViaHeader.getReceived()); // Workaround solution for SessionDescription.getConnection().getAddress() bug
+
+first phone in callcenter sometimes does not call
+
+Check Updates
+NetBeans6.9.1                       http://netbeans.org/downloads/index.html
+Mobicents Jain-Sip 157              http://hudson.jboss.org/hudson/view/Mobicents/job/jain-sip/lastSuccessfulBuild/artifact/
+Apache Derby 10.6.2.0               http://db.apache.org/derby/derby_downloads.html
+jmf 2.1.1e                          http://www.oracle.com/technetwork/java/javase/download-142937.html
+jfreechart1.0.13                    http://www.jfree.org/jfreechart/
+
+
+Asterisk tips
+make menuselect for alternative sounds in asterisk
+Restarting Asterisk after some hours makes it less cpu intensive
+sip show settings
+asterisk QOS setting
+asterisk jitterbuffer
+asterisk reg max duration
+register expire increase
+
+Asterisk Datamigration
+make samples
+migrate the following files:
+/etc/asterisk/extensions.conf
+/etc/asterisk/sip.conf
+/etc/asterisk/voicemail.conf
+
+Mocha decompile
+Proguard *.pro
+
+package & distribute with ./package_*
+cd
+./pack  

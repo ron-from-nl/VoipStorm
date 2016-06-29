@@ -1,0 +1,4 @@
+Font {
+        name: "Arial"
+        size: 25
+}

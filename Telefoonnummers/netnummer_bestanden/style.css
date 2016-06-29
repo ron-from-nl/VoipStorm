@@ -1,0 +1,2046 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Verdana, Helvetica,  sans-serif;
+	font-size:0.8em;
+	color:#000;
+}
+body.cs_CZ,
+body.en_CZ,
+body.sk_SK,
+body.en_SK
+{
+/* background: url(/docroot/images/body_bg.jpg)repeat-x 0 23px; */
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Verdana, Helvetica,  sans-serif;
+	font-size:0.8em;
+	color:#000;
+}
+div.sitewrap {
+	position: relative;
+	/*width: 940px;*/
+	margin: 0 auto;
+	padding:0;
+}
+p{
+	margin:7px 0 7px 0;
+	padding:0;
+}
+a {
+	color:#1269bb;
+	text-decoration:underline;
+}
+a:hover {
+	text-decoration:none;	
+}
+img {
+	border: 0;
+}
+.clearfloat,
+.clr {
+	clear: both;
+	height:0px;
+	font-size:0em;
+}
+div.styled_li ul{
+	margin:0;
+	padding:0;
+}
+	div.styled_li ul li{
+		background: url(/docroot/images/ster.gif) no-repeat 0 0;
+		list-style:none;
+		padding:0 0 0 20px;
+		margin:3px 0 3px 0;
+	}
+/************************************************************************/
+/* Sitewide menu														*/
+/************************************************************************/
+div.headerarea{
+	background: url(/docroot/images/bg_header.jpg) repeat-x 0 0;
+	height:180px;
+	position:relative;
+}	
+div.toolbar-button{
+/*	margin:10px 0 10px 0; */
+	margin: 10px 0px 10px 270px;
+	cursor:pointer;
+}
+	div.toolbar-button div.left-img{
+		background: url(/docroot/images/tb_button_left.gif) no-repeat 0 0;
+		height:28px;
+		width:30px;
+		float:left;
+	}
+	div.toolbar-button div.text-img{
+		background: url(/docroot/images/tb_button_fill.gif) repeat-x 0 0;
+		float:left;
+		height:28px;
+	}
+		div.toolbar-button div.text-img a{
+			padding:5px 4px 0 10px;
+			color:#000000;
+			display:block;
+			text-decoration:none;
+			font-size:0.9em;
+	}
+	div.toolbar-button div.right-img{
+		background: url(/docroot/images/tb_button_right.gif) no-repeat 0 0;
+		height:68px;
+		width:18px;
+		float:left;
+	}
+/************************************************************************/
+/* pathway											                    */
+/************************************************************************/
+div.pathway{
+	background: url(/docroot/images/bg_pathway.gif) repeat-x 0 0;
+	height:47px;
+	margin: 0 20px;
+	padding:15px 0 0 0;
+}
+			div.pathway div {
+				width: 940px;
+				margin: 0 auto;
+			}
+			body.align-left div.pathway div {
+				margin: 0 !important;
+			}
+			div.pathway a{
+				color:#0066cc;
+				text-decoration:none;
+			}
+			div.pathway a:hover{}
+			div.pathway a.active{
+				color:#000000;
+			}
+			div.pathway a.chapter{
+				color:#0066cc;
+				text-decoration:none;
+				font-size:1.7em;
+			}
+/************************************************************************/
+/* content											                    */
+/************************************************************************/
+div.contentwrap{
+
+	min-height:340px;
+    height:auto !important;
+    height:340px;
+	width:940px;
+	margin:0 auto;
+}
+body.align-left div.contentwrap {
+	margin: 0 0 0 20px !important;
+}
+/************************************************************************/
+/* layout left											                */
+/***********************************************************************/
+div.layout-left{
+	background:#FFFFFF;
+	width:200px;
+	height:auto;
+	margin:0px 40px 0px 0px;
+	display:inline;
+	float:left;
+}
+	div.layout-left div.mainlevel ul.mainlevel-1{	
+		background: url(/docroot/images/bg_mainlevel.gif) repeat-x 0 100%;
+		margin:0;
+		padding:0;
+	}
+		div.layout-left div.mainlevel ul.mainlevel-1 li{
+			background: url(/docroot/images/bg_mainlevel.gif) repeat-x 0 0;
+			list-style:none;
+		}
+			div.layout-left div.mainlevel ul.mainlevel-1 li a{
+				background: url(/docroot/images/mainlevel_arrow.gif) no-repeat 0 9px;
+				color:#0066cc;
+				display:block;
+				font-size:1em;
+				font-weight:bold;
+				padding:5px 0 5px 13px;
+				text-align:left;
+				text-decoration:none;
+			}
+			div.layout-left div.mainlevel ul.mainlevel-1 li a:hover{}
+			div.layout-left div.mainlevel ul.mainlevel-1 li a.active{
+				background: url(/docroot/images/mainlevel_arrow_active.gif) no-repeat 0 8px;
+				color:#0066cc;
+				display:block;
+				font-size:1em;
+				font-weight:bold;
+				padding:5px 0 5px 13px;
+				text-align:left;
+				text-decoration:none;
+			}		
+			div.layout-left div.mainlevel ul.mainlevel-1 li a.current{
+				background: url(/docroot/images/mainlevel_arrow_current.gif) no-repeat 0 9px;
+				color:#000000;
+				display:block;
+				font-size:1em;
+				font-weight:bold;
+				padding:5px 0 5px 13px;
+				text-align:left;
+				text-decoration:none;
+			}
+div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2{
+	margin:0px 0 0px 15px;
+	padding:0;
+}		
+	div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2 li{
+		background:none;
+		list-style:none;
+		padding:5px 0px 5px 0px;
+	}	
+		div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2 li a{
+			background: url(/docroot/images/mainlevel_2_arrow.gif) no-repeat 0 6px;
+			font-weight:normal;
+			padding:0 0 0px 10px;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2 li a:hover{}
+		div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2 li a.active{
+			background: url(/docroot/images/mainlevel_2_arrow_active.gif) no-repeat 0 6px;
+			font-weight:normal;
+			padding:0 0 0 10px;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-1 ul.mainlevel-2 li a.current{
+			background: url(/docroot/images/mainlevel_2_arrow_current.gif) no-repeat 0 6px;
+			font-weight:normal;
+			padding:0 0 0 10px;
+			color:#000000;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3{
+			margin:0 0 0 12px;
+			padding:0;
+		}
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3 li{
+			background:none;
+			list-style:none;
+			padding:5px 0px 5px 0px;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3 li a{
+			background: url(/docroot/images/mainlevel_2_arrow.gif) no-repeat 0 6px;
+			font-weight:normal;
+			padding:0 0 0 10px;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3 li a:hover{}
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3 li a.active{
+			background: url(/docroot/images/mainlevel_2_arrow_active.gif) no-repeat 0 6px;
+			font-weight:normal;
+			color:#0066cc;
+			padding:0 0 0 10px;
+		}	
+		div.layout-left div.mainlevel ul.mainlevel-2 ul.mainlevel-3 li a.current{
+			background: url(/docroot/images/mainlevel_2_arrow_current.gif) no-repeat 0 6px;
+			font-weight:normal;
+			color:#000000;
+			padding:0 0 0 10px;
+		}	
+/************************************************************************/
+/* layout center area										            */
+/************************************************************************/
+div.layout-center{
+	background:#FFFFFF;
+	float:left;
+	width:460px;
+	min-height:400px;
+	height:auto !important;
+	height:400px;
+}	
+div.layout-center div.layout-center-text{
+	margin:0px;
+	display:inline;
+	float:left;
+}
+div.layout-center div.layout-center-text p{
+	padding:0 10px 0 0;
+}
+	div.layout-center div.layout-center-text h1{
+		color:#000000;
+		font-size:1.5em;
+		margin:0px 0 15px 0;
+		padding:0;
+	}
+	div.layout-center div.layout-center-text h2{
+		color:#000000;
+		font-size:1.4em;
+		margin:0px 0 15px 0;
+		padding:0;
+	}
+div.layout-center div.layout-center-text ul.anchor-link{
+	margin:0;
+	padding:0;
+}	
+	div.layout-center div.layout-center-text ul.anchor-link li{	
+		list-style: none;
+	}
+		div.layout-center div.layout-center-text ul.anchor-link li a{
+			background: url(/docroot/images/arrow_list.gif) no-repeat 0 3px;
+			padding:0 0 0 17px;
+			text-decoration:none;
+		}
+		div.layout-center div.layout-center-text ul.anchor-link li a:hover{
+			color:#999999;
+		}
+div.anchor-content{}
+	div.anchor-content div.header{
+		font-weight:bold;
+		padding:15px 0 0 0;
+	}
+		div.layout-center div.layout-center-text img.left-float{
+			float:left;
+			margin:0 10px 10px 0;
+		}
+		div.layout-center div.layout-center-text div.highlight{
+			margin:20px 0 20px 0;
+		}
+		div.layout-center div.layout-center-text div.highlight div.highlight-top{
+			background: url(/docroot/images/highlight_top.gif) no-repeat 0 10px;
+			width:460px;
+			height:20px;
+		}
+		div.layout-center div.layout-center-text div.highlight div.highlight-content{
+			background: url(/docroot/images/highlight_content.gif) repeat-y 0 0;
+			width:460px;			
+		}
+			div.layout-center div.layout-center-text div.highlight div.highlight-content-text{
+				margin:0 10px 0 20px;
+				border:1px solid #FFF072;
+			}
+		div.layout-center div.layout-center-text div.highlight div.highlight-bottom{
+			background: url(/docroot/images/highlight_bottom.gif) no-repeat 0 0px;
+			width:460px;
+			height:10px;
+		}
+div.layout-center div.layout-center-text  a.back-top{
+	background: url(/docroot/images/arrow_backtop.gif) no-repeat 0 4px;
+	font-size:0.85em;
+	text-decoration:none;
+	padding:0 0 0 12px;
+	float:right;
+	}	
+	div.layout-center div.layout-center-text  a.back-top:hover{
+		text-decoration:underline;
+	}	
+	div.layout-center div.layout-center-text div.underline{
+		background: url(/docroot/images/dotted_line.gif) repeat-x 0 0;
+		height:1px;
+		width:460px;
+		font-size:0px;
+	}		
+/************************************************************************/
+/* layout center area wide									            */
+/************************************************************************/		
+div.layout-center-wide{
+	background:#FFFFFF;
+	float:left;
+	width:700px;
+	min-height:400px;
+	height:auto !important;
+	height:400px;
+}	
+div.layout-center-wide div.layout-center-text{
+	margin:0px;
+	display:inline;
+	float:left;
+}
+div.layout-center-wide div.layout-center-text p{
+	padding:0 10px 0 0;
+}
+div.layout-center-wide div.layout-center-text div a.back-top{
+	background: url(/docroot/images/arrow_backtop.gif) no-repeat 0 6px;
+	font-size:0.85em;
+	text-decoration:none;
+	padding:0 0 0 8px;
+	float:right;
+	}	
+	div.layout-center-wide div.layout-center-text div a.back-top:hover{
+		text-decoration:underline;
+	}	
+	div.layout-center-wide div.layout-center-text div.underline{
+		background: url(/docroot/images/dotted_line.gif) repeat-x 0 0;
+		height:1px;
+		width:700px;
+		font-size:0px;
+	}	
+	div.layout-center-wide div.layout-center-text h1{
+		color:#000000;
+		font-size:1.5em;
+		margin:0px 0 15px 0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text h2{
+		color:#000000;
+		font-size:1.4em;
+		margin:10px 0 15px 0;
+		padding:0;
+	}
+		div.layout-center-wide div.layout-center-text img.left-float{
+			float:left;
+			margin:0 10px 10px 0;
+		}
+		div.layout-center-wide div.layout-center-text div.highlight{
+			margin:20px 0 20px 0;
+		}
+		div.layout-center-wide div.layout-center-text div.highlight div.highlight-top{
+			background: url(/docroot/images/highlight_top_wide.gif) no-repeat 0 10px;
+			width:700px;
+			height:20px;
+		}
+		div.layout-center-wide div.layout-center-text div.highlight div.highlight-content{
+			background: url(/docroot/images/highlight_content_wide.gif) repeat-y 0 0;
+			width:700px;
+		}
+			div.layout-center-wide div.layout-center-text div.highlight div.highlight-content-text{
+				margin:0px 10px 0 20px;
+				border:1px solid #FFF072;
+			}
+		div.layout-center-wide div.layout-center-text div.highlight div.highlight-bottom{
+			background: url(/docroot/images/highlight_bottom_wide.gif) no-repeat 0 0;
+			width:700px;
+			height:10px;
+		}
+div.layout-center-wide div.layout-center-text a.back-top{
+	background: url(/docroot/images/arrow_backtop.gif) no-repeat 0 6px;
+	font-size:0.85em;
+	text-decoration:none;
+	padding:0  0 0 12px;
+	float:right;
+	}	
+	div.layout-center-wide div.layout-center-text a.back-top:hover{
+		text-decoration:underline;
+	}	
+	div.layout-center-wide div.layout-center-text div.underline{
+		background: url(/docroot/images/dotted_line.gif) repeat-x 0 0;
+		height:1px;
+		font-size:0px;	
+	}		
+div.layout-center-wide div.layout-center-text ul.anchor-link{
+	margin:0;
+	padding:0;
+}	
+	div.layout-center-wide div.layout-center-text ul.anchor-link li{	
+		list-style: none;
+	}
+		div.layout-center-wide div.layout-center-text ul.anchor-link li a{
+			background: url(/docroot/images/arrow_list.gif) no-repeat 0 3px;
+			padding:0 0 0 17px;
+			text-decoration:none;
+		}
+		div.layout-center-wide div.layout-center-text ul.anchor-link li a:hover{
+			color:#999999;
+		}
+/************************************************************************/
+/* ads styles									                        */
+/************************************************************************/			
+div.layout-center-wide div.layout-center-text div.ad-top-block{
+	width:690px;
+	margin:0 0 20px 0;
+	padding:0;
+}
+	div.layout-center-wide div.layout-center-text div.ad-top-block div.underline{
+		background: url(/docroot/images/dotted_line.gif) repeat-x 0 0;
+		height:1px;	
+		width:690px;
+		font-size:0px;
+	}
+	div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-image{
+		float:left;
+	}
+		div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-image img{
+			 float:left;
+		}
+		div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-anchors{
+			float:left
+		}
+			div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-anchors ul{
+				margin:25px 0 0 0;
+				padding:0;
+			}
+				div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-anchors ul li{
+					list-style:none;
+					height:19px;
+					padding:0;
+					margin:0;
+				}
+					div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-anchors ul li a{
+						background: url(/docroot/images/yellow_block_arrow.jpg) no-repeat 0 0;
+						text-decoration:none;
+						padding:0 0 0 20px;
+						margin:0;
+						display:block;						
+					}
+					div.layout-center-wide div.layout-center-text div.ad-top-block div.ad-top-anchors ul li a:hover{}
+div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block{
+	width:690px;
+	margin:0 0 20px 0;
+	height:auto;
+}
+	div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block h2{}
+	div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block div.ad-block-image{
+		width:310px;
+		float:left;
+		margin:0 0 20px 0;
+	}
+	div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block div.ad-block-text{
+		float:left;
+		width:360px;
+		margin:0 0 20px 0;
+	}
+		div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block div.ad-block-text h3{
+			background: url(/docroot/images/yellow_block_arrow.jpg) no-repeat 0 0;
+			font-size:1em;
+			margin:0 0 3px 0;
+			padding:0 0 0 20px;
+		}
+		div.layout-center-wide div.layout-center-text div.ad-collection div.ad-block div.ad-block-text p{
+			margin:0 0 3px 21px;
+			padding:0;
+			font-size:0.9em;
+		}
+/************************************************************************/
+/* press styles									                        */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text div.press-top-block{}
+	div.layout-center-wide div.layout-center-text div.press-top-block div.press-top-image{
+		margin:0 0 20px 0;
+	}
+div.layout-center-wide div.layout-center-text div.press-block{
+	margin:0 0 20px 0;
+}
+	div.layout-center-wide div.layout-center-text div.press-block div.press-block-text{}
+	div.layout-center-wide div.layout-center-text div.press-block div.press-block-text h2{
+		margin:0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text div.press-block div.press-block-text p{
+		margin:0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text div.press-block div.press-block-text div.date{
+		font-style:italic;
+		color:#ff9900;
+	}
+	div.layout-center-wide div.layout-center-text div.press-block div.press-service-links{
+		margin:5px 0 0 0;
+	}
+		div.layout-center-wide div.layout-center-text div.press-block div.press-service-links a{
+			font-size:0.87em;
+		}
+		div.layout-center-wide div.layout-center-text div.press-block  div.press-service-links a:hover{}
+		
+		div.layout-center-wide div.layout-center-text div.press-block div.press-service-links a.more{
+			background: url(/docroot/images/yellow_block_arrow.jpg) no-repeat 0 0;
+			padding:0 0 0 22px;
+			height:16px;
+			float:left;
+		}
+		div.layout-center-wide div.layout-center-text div.press-block div.press-service-links a.print{
+			background: url(/docroot/images/print.gif) no-repeat 0 0;
+			padding:0 15px 0 20px;
+			float:right;
+		}
+		div.layout-center-wide div.layout-center-text div.press-block div.press-service-links a.pdf{
+			float:right;
+		}		
+		div.layout-center-wide div.layout-center-text div.press-block div.press-service-links div img{
+			float:right;
+		}
+/************************************************************************/
+/* layout right area									                */
+/************************************************************************/			
+div.layout-right{
+	background:#FFFFFF;
+	float:left;
+	width:199px;
+	/*margin:0 0 0px 40px;*/
+}					
+div.layout-right div.right-banners{}
+	div.layout-right div.right-banners div{}
+			div.layout-right div.right-banners div h1{
+				margin:0;
+				padding:0;
+				font-size:1.5em;
+			}	
+	div.layout-right div.right-banners div img{
+		margin:0px 0 30px 0px;
+		display:block;
+	}
+/************************************************************************/
+/* Footer				                                             	*/
+/************************************************************************/
+div.footer{
+	background: url(/docroot/images/bg_footer.gif) 0 0 no-repeat;
+	display:inline;
+	float:left;
+	height:110px;
+	margin:0;
+	width:940px;
+}
+div.footerarea{
+	background: url(/docroot/images/bg_footer.gif) 0 0 no-repeat;
+	display:inline;
+	float:left;
+	height:110px;
+	margin:0;
+	width:940px;
+}
+/************************************************************************/
+/* FAQ			                                */
+/************************************************************************/	
+dl#faq dt {
+	color:#1269bb;
+	font-weight:bold;
+}
+dl.faq dt.faqClosed {
+	background:transparent url(/docroot/images/faq_forward_arrow.gif) no-repeat 0 7px;
+	color:#1269bb;
+	font-weight:bold;
+	text-decoration:none;
+	font-weight:bold;
+	padding:3px 0 0 10px;
+	cursor:pointer;
+}
+dl.faq dt.faqOpen {
+	background:transparent url(/docroot/images/faq_down_arrow.gif) no-repeat 0 7px;
+	color:#1269bb;
+	cursor:pointer;
+	font-weight:bold;
+	padding:3px 0 0 10px;
+}
+dl.faq dd {
+	display: block;
+	margin: 0;
+	padding: 0 0 0 10px;
+	overflow: hidden;
+}
+/************************************************************************/
+/* QUICKMENU			                                */
+/************************************************************************/	
+div.layout-left div.quickmenu-top{
+	background: url(/docroot/images/bg_quickmenu_top.gif) no-repeat 0 100%;
+	height:10px;
+}
+div.layout-left dl#quickmenu{
+	background: url(/docroot/images/bg_quickmenu_fill.gif) repeat-y 0 0;
+}
+div.layout-left div.quickmenu-bottom{
+	background: url(/docroot/images/bg_quickmenu_bottom.gif) no-repeat 0 0;
+	height:10px;
+}
+dl#quickmenu{
+	margin:0 0 0 0;
+	padding:0 0 0 10px;
+}
+dl.quickmenu dt.quickmenuClosed {
+	cursor:pointer;
+}
+dl.quickmenu dt.quickmenuOpen {
+	cursor:pointer;
+}
+div.layout-left dl.quickmenu a.quickmenuHide,
+div.layout-left dl.quickmenu a.quickmenuShow,
+div.layout-left dl.quickmenu dd a.quickmenuToTop{
+	display:none;
+}
+	div.layout-left dl.quickmenu dt{
+		background: url(/docroot/images/quickmenu_active.gif) no-repeat 0 7px;
+		color:#0066cc;
+		display:block;
+		font-size:0.9em;
+		font-weight:bold;
+		padding:5px 0 5px 15px;
+		text-align:left;
+		text-decoration:none;
+	}
+	div.layout-left dl.quickmenu dt.quickmenuClosed{
+		background: url(/docroot/images/quickmenu.gif) no-repeat 0 7px;
+		color:#0066cc;
+		display:block;
+		font-size:0.9em;
+		font-weight:bold;
+		padding:5px 0 5px 15px;
+		text-align:left;
+		text-decoration:none;
+	}
+	div.layout-left dl.quickmenu dd {
+		display: block;
+		margin: 0 10px 0 0;
+		padding: 0 0 0 10px;
+		border-bottom:1px dashed #ccc;
+		overflow: hidden;
+	}
+	div.layout-left dl.quickmenu dd a{
+		background: url(/docroot/images/quickmenu_level2.gif) no-repeat 0 5px;
+		text-decoration:none;
+		padding:0px 0 5px 12px;
+
+	}
+	div.layout-left dl.quickmenu dd p br{
+		margin:0;
+		padding:0;
+		font-size:10px;
+	}
+/************************************************************************/
+/* Flash container			                                            */
+/************************************************************************/
+div.layout-center-wide div.layout-center-text div.flash-container{
+	position:relative;
+}
+	div.layout-center-wide div.layout-center-text div.flash-container div.flash-block{
+		margin:0 0 0 0;
+		padding:0 0 0 0;
+		height:363px;
+		display:block;
+		width:700px;
+	}
+	div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons{
+		text-align:center;
+		float:left;
+		margin:0 0 0 0;
+	}	
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a{
+			height:80px;
+			display:block;
+			float:left;
+			width:170px;
+		/*border:3px solid #FFFFFF;*/
+		}	
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a.pic-1{
+			padding:0 6px 0 0;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a.pic-2{
+			padding:0 6px 0 0;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a.pic-3{
+			
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a.pic-4{
+			padding:0 0 0 6px;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons a.current{
+			/*background: url(/docroot/images/flash_image_overlay.gif) no-repeat 0 5px;*/
+			height:80px;
+			display:block;
+			float:left;
+			width:170px;
+			/*border:3px solid #ffbb04;*/
+		}	
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons div.mask-frame-1{
+			background: url(/docroot/images/flash_image_overlay.gif) no-repeat 0 0 ;
+			position: absolute;
+			top: 363px;
+			left: 0px;
+			width: 170px;
+			height: 80px;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons div.mask-frame-2{
+			background: url(/docroot/images/flash_image_overlay.gif) no-repeat 0 0 ;
+			position: absolute;
+			top: 363px;
+			left: 176px;
+			width: 170px;
+			height: 80px;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons div.mask-frame-3{
+			background: url(/docroot/images/flash_image_overlay.gif) no-repeat 0 0 ;
+			position: absolute;
+			top: 363px;
+			left: 352px;
+			width: 170px;
+			height: 80px;
+		}
+		div.layout-center-wide div.layout-center-text div.flash-container div.flash-buttons div.mask-frame-4{
+			background: url(/docroot/images/flash_image_overlay.gif) no-repeat 0 0 ;
+			position: absolute;
+			top: 363px;
+			left: 528px;
+			width: 170px;
+			height: 80px;
+		}
+/************************************************************************/
+/* Menu Sitemap VIEW                                                    */
+/************************************************************************/	
+div.layout-center-fullwidth{
+	width:940px;
+}
+div.layout-center-fullwidth div.layout-center-text div.cols{
+	width:940px;
+
+}	
+	div.layout-center-fullwidth div.layout-center-text div.cols div.col-block{
+		float:left;
+		width:300px;
+		margin:0 0 30px 15px;
+	    height:auto !important;
+	}
+		div.layout-center-fullwidth div.layout-center-text div.cols div.col-block img{
+			float:left;
+		}
+		div.layout-center-fullwidth div.layout-center-text div.cols div.col-block h1{
+			margin:13px 0 0 10px;
+			float:left;
+			font-size:19px;
+		}
+			div.layout-center-fullwidth div.layout-center-text div.cols div.col-block ul{
+				margin:0;
+				padding:0;
+			}
+				div.layout-center-fullwidth div.layout-center-text div.cols div.col-block ul li{
+					list-style:none;
+					margin:0 0 10px 0;
+					padding:0;
+				}
+						div.layout-center-fullwidth div.layout-center-text div.cols  div.col-block ul li a{
+							text-decoration:underline;
+							font-weight:bold;		
+							color:#000000;			
+						}
+						div.layout-center-fullwidth div.layout-center-text div.cols div.col-block ul li a:hover{
+							text-decoration:none;
+						}
+/************************************************************************/
+/* Anchor list VIEW                                                    */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text div.anchor-intro{
+	width:550px;
+	padding:0 0 15px 0;
+}
+div.layout-center-wide div.layout-center-text div.anchor-list-block div.anchor-list{
+	width:500px;
+	text-align:center;
+	padding:0 0 5px 0;
+	background:url(/docroot/images/bg_mainlevel.gif) repeat-x 0 100%;	
+}
+	div.layout-center-wide div.layout-center-text div.anchor-list-block div.anchor-list ul{
+		margin:0;
+		padding:0;
+	}
+		div.layout-center-wide div.layout-center-text div.anchor-list-block div.anchor-list ul li{		
+			display:inline;
+		}
+			div.layout-center-wide div.layout-center-text div.anchor-list-block div.anchor-list ul li a{
+				text-decoration:none;
+			}
+			div.layout-center-wide div.layout-center-text div.anchor-list-block div.anchor-list ul li a:hover{
+				text-decoration:underline;
+			}
+div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm{
+	width:500px;
+}
+	div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm tr th{
+		text-align:left;
+		height:25px;
+		border-right: 20px solid #FFFFFF;
+	}
+	div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm tr td.land{
+		width:190px;
+		background: url(/docroot/images/bg_mainlevel.gif) repeat-x 0 100%;
+		height:25px;
+		border-right: 20px solid #FFFFFF;
+	}
+	div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm  td.firm{
+		width:280px;
+		background: url(/docroot/images/bg_mainlevel.gif) repeat-x 0px 100%;
+		height:25px;
+	}
+			div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm tr td.firm a{
+				text-decoration:none;
+			}
+			div.layout-center-wide div.layout-center-text div.anchor-list-block table.land-firm tr td.firm a:hover{
+				text-decoration:underline;
+			}		
+/************************************************************************/
+/* FORM STYLES				                                            */
+/************************************************************************/	
+div.layout-center-wide{
+	float:left;
+}
+div.layout-center-wide div.layout-center-text{}
+	div.layout-center-wide div.layout-center-text h1{
+		font-size:1.3em;
+		float:left;
+		margin:0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text a.helplink{
+		font-size:0.85em;
+		padding:3px 0 10px 10px;
+		color:#000000;
+		float:left;
+	}	
+	div.layout-center-wide div.layout-center-text a.clearlink{
+		font-size:0.85em;
+		padding:3px 0 10px 10px;
+		color:#000000;
+		float:right;
+	}
+	div.layout-center-wide div.layout-center-text a.formlink{
+		font-size:0.85em;
+		color:#000000;
+		padding:0 0 0 10px;
+	}
+	div.layout-center-wide div.layout-center-text a.catlink{
+		font-size:0.85em;
+		color:#000000;
+		display:block;
+		padding:15px 0 0 0;
+	}
+	div.layout-center-wide div.layout-center-text div.required{
+		font-weight:bold;
+		margin:0 0 10px 0;
+	}
+	div.layout-center-wide div.layout-center-text div.required-field{
+		color:#666666;
+		font-size:10px;
+		padding:10px 0 0 0;
+	}
+	span.required{
+		color:#FF0000;
+		padding:0 0 0 5px;
+	}
+form.add-update-data{
+	margin:0 0 20px 0;	
+	padding:0;
+	width:700px;
+	}
+	form.add-update-data div.left-form-area{
+		border-right:2px solid #cccccc;
+		float:left;
+		width:400px;
+	}
+	form.add-update-data div.right-form-area{
+		float:left;
+		margin:0 0 0 10px;
+	}
+
+	form.add-update-data div.right-form-area table th{
+		text-align:left;
+		font-weight:normal;
+	}
+		form.add-update-data div.right-form-area table td.checkbox{
+			text-align:center;
+		}
+	form.add-update-data div select{
+		border:1px solid #cccccc;
+	}
+	form.add-update-data  div.check-block-left {
+		width:130px;
+		float:left;
+		margin:0 0 10px 0;
+	}
+		form.add-update-data  div.check-block-left input{
+			float:left;
+		}
+		form.add-update-data  div.check-block-left div.text{
+			float:left;
+			width:110px;
+			margin:0 0 10px 0;
+		}
+	form.add-update-data  div.check-block-right {
+		width:150px;
+		float:left;
+	}
+		form.add-update-data  div.check-block-right input{
+			float:left;
+		}
+		form.add-update-data  div.check-block-right div.text{
+			float:left;
+			width:130px;
+			margin:0 0 10px 0;
+		}
+	form.add-update-data label.default{
+		margin:15px 0 5px 0;
+		padding:0;
+		display:block;
+		font-size:0.9em;
+	}
+	form.add-update-data label.left{
+		float:left;
+		padding:0 10px 0 0;
+	}
+	form.add-update-data input.xxl{
+		width:330px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.xl{
+		width:300px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.l{
+		width:250px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.m{
+		width:210px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.s{
+		width:100px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.xs{
+		width:70px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data input.xxs{
+		width:60px;
+		border:1px solid #cccccc;
+	}
+	form.add-update-data div.tripple-block{}
+		form.add-update-data div.tripple-block div{
+			float:left;
+		}
+			form.add-update-data div.tripple-block div input{
+				margin:0 7px 0 0;
+			}
+			form.add-update-data div.tripple-block div select{
+				margin:0 7px 0 0;
+				border:1px solid #cccccc;
+			}
+form.add-update-data div.sender-info{
+	margin:40px 0 20px 0;
+	float:left;
+	min-height:130px;
+  	height:auto !important;
+	height:130px;
+	width:700px;
+  	border-top:2px solid #cccccc;
+	border-bottom:2px solid #cccccc;
+} 
+form.add-update-data div.sender-info div.left-form-area-bottom{
+		float:left;
+		width:405px;
+	}
+	form.add-update-data div.sender-info div.right-form-area-bottom{
+		float:left;
+		margin:0 0 0 7px;
+	}
+form.add-update-data input{
+	font-family:Arial, Helvetica, sans-serif;
+}
+form.add-update-data div.disclaimer{
+	float:left;
+	width:700px;
+	margin:0 0 20px 0;
+}
+	form.add-update-data input.send{
+		cursor:pointer;
+		float:right;
+	}
+form.add-update-data input.clear{
+	border:0;
+	background:none;
+	padding:10px 0 0 0;
+	font-size:0.85em;
+	cursor:pointer;
+	float:right;
+	text-decoration:underline;
+}
+form.add-update-data input.clear:hover{
+	text-decoration:none;
+}
+form.add-update-data div.disclaimer div.disclaimer-text{
+		color:#999999;
+		margin:20px 0 0 0;
+	}	
+div.border-bottom{
+	border-bottom:2px solid #cccccc;
+	float:left;
+	margin:17px 0 0 0;
+	width:700px;
+}
+/************************************************************************/
+/* FORM OUTPUT STYLES				                                    */
+/************************************************************************/	
+table.FormOutputTable{
+	margin:0 0 40px 0;
+}
+	table.FormOutputTable td{
+		border:1px solid #cccccc;
+		padding:5px 0 5px 5px;
+	}
+	table.FormOutputTable th{
+		padding:5px 0 5px 5px;
+		border:none;
+	}
+{
+    font-family: inherit;
+    font-size: inherit;
+}
+/************************************************************************/
+/* Database form                                                 */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text form.request-database{
+	margin:0;
+	padding:0;
+}
+	div.layout-center-wide div.layout-center-text form.request-database div.left-form-area{
+		width:280px;
+		float:left;
+	}
+		div.layout-center-wide div.layout-center-text div.requestform-intro{
+			font-weight:bold;
+			color:#595959;
+			padding:20px 0 20px 0;
+		}
+				div.layout-center-wide div.layout-center-text form.request-database div.left-form-area label{
+					/*width:255px;*/
+					float:left;
+					height:20px;
+				}
+				div.layout-center-wide div.layout-center-text form.request-database div.left-form-area input{
+					float:left;
+					margin:0 0 20px 0;
+				}
+				div.layout-center-wide div.layout-center-text form.request-database div.left-form-area input.checkbox{
+					height:15px;
+					margin:0 0 20px 5px;
+				}
+				div.layout-center-wide div.layout-center-text form.request-database div.left-form-area textarea{
+					float:left;
+					margin:0 0 20px 0;	
+					font-size:13px;
+					font-family: Arial, Verdana, Helvetica,  sans-serif;
+				}
+		div.layout-center-wide div.layout-center-text form.request-database div.right-form-area{
+			width:260px;
+			float:left;
+		}	
+			div.layout-center-wide div.layout-center-text form.request-database div.right-form-area label{
+				/*width:260px;*/
+				float:left;
+				height:20px;
+			}
+			div.layout-center-wide div.layout-center-text form.request-database div.right-form-area input{
+				float:left;
+				margin:0 0 20px 0;
+			}
+/************************************************************************/
+/* Technical errors form                                                 */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text form.technical-errors-form{
+	margin:0;
+	padding:0;
+	width:525px;
+}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form div.radiobuttons-block{
+		float:left;
+		width:205px;
+		margin:0 0 10px 0;
+	}
+		div.layout-center-wide div.layout-center-text form.technical-errors-form div.radiobuttons-block label{
+			float:left;
+			width:180px;
+		}
+		div.layout-center-wide div.layout-center-text form.technical-errors-form div.radiobuttons-block input.radio_btn{
+			float:left;
+			width:15px;
+			height:15px;
+			margin:0 10px 0 0;
+		}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form label{
+		width:210px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form input.small{
+		width:93px;
+		margin:0 4px 2px 0;
+		float: left;
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form input.medium{
+		width:202px;
+
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form input.send{
+		width:68px;
+		height:28px;
+		float:right;
+		margin:10px 0 15px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form input{
+		width:305px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form textarea{
+		width:305px;
+		font-family:inherit;
+		font-size:13px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.technical-errors-form span.comments{
+		font-size:11px;
+	}
+/************************************************************************/
+/* Idea and Comments form                                                 */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text form.idea-comments-form{
+	margin:0;
+	padding:0;
+	width:525px;
+}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form div.radiobuttons-block{
+		float:left;
+		width:205px;
+		margin:0 0 10px 0;
+	}
+		div.layout-center-wide div.layout-center-text form.idea-comments-form div.radiobuttons-block label{
+			float:left;
+			width:180px;
+		}
+		div.layout-center-wide div.layout-center-text form.idea-comments-form div.radiobuttons-block input.radio_btn{
+			float:left;
+			width:15px;
+			height:15px;
+			margin:0 10px 0 0;
+		}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form label{
+		width:210px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form input.small{
+		width:93px;
+		margin:0 4px 2px 0;
+		float: left;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form input.medium{
+		width:202px;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form input.send{
+		width:68px;
+		height:28px;
+		float:right;
+		margin:10px 0 15px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form input{
+		width:305px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form textarea{
+		width:305px;
+		font-family:inherit;
+		font-size:13px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.idea-comments-form span.comments{
+		font-size:11px;
+	}
+/************************************************************************/
+/* Corrections advertisers form                                                 */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text form.correction-advertisers-form{
+	margin:0 0 15px 0;
+	padding:0;
+	width:525px;
+}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form div.dotted-border{
+		padding:0;
+		margin:15px 0 20px 0;
+		border-bottom:2px dotted #CCCCCC;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form div.radiobuttons-block{
+		float:left;
+		width:305px;
+		margin:0 0 10px 0;
+	}
+		div.layout-center-wide div.layout-center-text form.correction-advertisers-form div.radiobuttons-block label{
+			float:left;
+			width:275px;
+		}
+		div.layout-center-wide div.layout-center-text form.correction-advertisers-form div.radiobuttons-block input.radio_btn{
+			float:left;
+			width:15px;
+			height:15px;
+			margin:0 10px 0 0;
+		}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form label{
+		width:210px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form input.small{
+		width:93px;
+		margin:0 4px 2px 0;
+		float: left;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form input.medium{
+		width:202px;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form input.send{
+		width:68px;
+		height:28px;
+		float:right;
+		margin:10px 0 15px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form input{
+		width:305px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form textarea{
+		width:305px;
+		font-family:inherit;
+		font-size:13px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correction-advertisers-form span.comments{
+		font-size:11px;
+	}
+		
+div#books,
+div#ads{
+	width:500px;
+}
+/************************************************************************/
+/* Correct Information form                                                 */
+/************************************************************************/	
+div.layout-center-wide div.layout-center-text form.correct-information-form{
+	margin:0;
+	padding:0;
+	width:525px;
+}
+
+	div.layout-center-wide div.layout-center-text form.correct-information-form div.dotted-border{
+		padding:0;
+		margin:15px 0 20px 0;
+		border-bottom:2px dotted #CCCCCC;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block{
+		width:288px;
+		margin:0 0 10px 210px;
+		background:#99cc99;
+		padding:10px;
+	}
+			div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block div input.large{
+				width:276px;
+			}
+		div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block div.double-block{}
+			div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block div.double-block div{
+				float:left;
+				width:144px;
+			}
+				div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block div.double-block div label{
+					width:100px;
+				}
+				div.layout-center-wide div.layout-center-text form.correct-information-form div.from-till-block div.double-block div input.medium{
+					width:132px;
+				}
+	div.layout-center-wide div.layout-center-text form.correct-information-form label{
+		width:210px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form input.small{
+		width:93px;
+		margin:0 4px 2px 0;
+		float: left;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form input.medium{
+		width:202px;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form input.medium_2{
+		width:202px;
+		margin:0 0 2px 4px;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form input.send{
+		width:68px;
+		height:28px;
+		float:right;
+		margin:10px 0 15px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form input{
+		width:305px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form textarea{
+		width:305px;
+		font-family:inherit;
+		font-size:13px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.correct-information-form span.comments{
+		font-size:11px;
+	}	
+/************************************************************************/
+/* contact representatative form                                        */
+/************************************************************************/
+div.layout-center-wide div.layout-center-text form.contact-representative{
+	margin:0;
+	padding:0;
+}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.checkbox-1{
+		height:20px;
+		float:left;
+		width:175px;
+		margin:20px 0 10px 0;
+	}
+		div.layout-center-wide div.layout-center-text form.contact-representative div.checkbox-1 input{
+			margin:0 2px 0 0;
+			width:13px;
+		}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.checkbox-2{
+		height:20px;
+		float:left;
+		margin:20px 0 0 0;
+	}
+		div.layout-center-wide div.layout-center-text form.contact-representative div.checkbox-2 input{
+			margin:0 2px 0 0;
+			width:13px;
+		}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.street{
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.tel_contact{
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.ver_code{
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.string{
+		width:140px;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.veri-code-image{
+		padding:0 0 0 30px;
+		float:left;
+	}
+		div.layout-center-wide div.layout-center-text form.contact-representative div.veri-code-image{
+			padding:0 0 0 30px;
+			float:left;
+		}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.email{
+		float:left;
+		padding:0 0 0 30px;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative div.number{
+		padding:0 0 0 30px;
+		float:left;
+	}
+		div.layout-center-wide div.layout-center-text form.contact-representative div.number input.medium{
+			width:80px;
+		}
+	div.layout-center-wide div.layout-center-text form.contact-representative label{
+		height:20px;
+		display:block;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative input.checkbox{
+		height:15px;
+		float:left;
+		margin:0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text form.contact-representative input{
+		margin:0 0 10px 0;
+	}
+/************************************************************************/
+/* flash video page                                                     */
+/************************************************************************/
+div.layout-center-wide div.layout-center-text div.fla-intro-block{}
+	div.layout-center-wide div.layout-center-text div.fla-intro-block div.fla-introblock-top{
+		background: url(/docroot/images/fla_intro_top.gif) no-repeat 0  10px;
+		height:20px;
+		width:460px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text div.fla-intro-block ul.fla-introblock{
+		background: url(/docroot/images/fla_intro_fill.gif) repeat-y 0 0;
+		width:460px;
+		margin:0;
+		float:left;
+		padding:0;
+	}
+		div.layout-center-wide div.layout-center-text div.fla-intro-block ul.fla-introblock li{
+			list-style:none;
+			background: url(/docroot/images/arrow_black.gif) no-repeat 0 5px;
+			padding:0 0 0 10px;
+			margin:0 0 0 20px;
+		}
+	div.layout-center-wide div.layout-center-text div.fla-intro-block div.fla-introblock-bottom{
+		background: url(/docroot/images/fla_intro_bottom.gif) no-repeat 0  0;
+		height:10px;
+		width:460px;
+		float:left;
+}
+div.layout-center-wide div.layout-center-text div.linklist{}
+	div.layout-center-wide div.layout-center-text div.linklist ul.fla-link-list{
+		margin:20px 0 0 0;
+		padding:0;
+	}
+		div.layout-center-wide div.layout-center-text div.linklist ul.fla-link-list li{
+			display:inline;
+		}
+				div.layout-center-wide div.layout-center-text div.linklist ul.fla-link-list li a{
+					background: url(/docroot/images/yellow_block_arrow.jpg) no-repeat 0 0;
+					padding:0 10px 0 20px; 
+					text-decoration:underline;
+				}
+				div.layout-center-wide div.layout-center-text div.linklist ul.fla-link-list li a:hover{
+					text-decoration:none;
+				}
+div.layout-center-wide div.layout-center-text div.fla-video-block{
+	margin:20px 0 0 0;
+	width:630px;
+}
+	div.layout-center-wide div.layout-center-text div.fla-video-block div.fla-thumb-overview{
+		width:195px;
+		float:left;
+	}
+		div.layout-center-wide div.layout-center-text div.fla-video-block div.fla-thumb-overview img{
+			padding:0 5px 5px 0;
+		}
+div.layout-center-wide div.layout-center-text div.fla-video-block div.fla-container{
+	float:right;
+	margin:0 0 0 25px;
+	height:20px;
+	width:430px;
+}	
+div.layout-center-wide div.layout-center-text div.fla-video-block div.fla-container div.subscript{
+	float:right;
+	width:430px;
+	text-align:center;
+	margin:5px 0 10px 0;
+	font-weight:bold;
+}
+/************************************************************************/
+/* BRANCH SEARCH PAGE */
+/************************************************************************/
+div.branche-popup{
+	margin:10px;
+	width:750px;
+}
+div.branche-popup div.branchsearch {
+	margin: 0 0 4px 4px;
+	height: 55px;
+	width:700px;
+	}
+	div.branche-popup div.branchsearch div.top-img {
+		width:2px;
+		height:55px;
+		font-size:1px;
+		background: url(/docroot/images/brbxlfimg.gif) no-repeat 0 0; 
+		float:left;
+	}
+	div.branche-popup div.branchsearch div.fill-img {
+		float:left;
+		background: url(/docroot/images/brbxcnimg.gif) repeat-x 0 0;
+		height: 55px;
+		width:99%;	
+	}
+			div.branche-popup div.branchsearch div.fill-img form.branche-form{
+				margin:12px;
+			}
+				div.branche-popup div.branchsearch div.fill-img form.branche-form div.searchbox{
+					margin: 10px 0 0 40px;
+				}
+					div.branche-popup div.branchsearch div.fill-img form.branche-form div.searchbox div.text{
+						 float:left;
+						 color:#58595B;
+						 margin:6px 0 0 0;
+					}
+					div.branche-popup div.branchsearch div.fill-img form.branche-form div.searchbox input.branch-input{
+						margin:0 0 5px 20px;
+					}
+					div.branche-popup div.branchsearch div.fill-img form.branche-form div.searchbox input.button{
+						margin:0 0 0 20px;
+					}
+	div.branche-popup div.branchsearch div.bottom-img {
+		width:2px;
+		height:55px;
+		background: url(/docroot/images/brbxrtimg.gif) no-repeat 0 0; 
+		float:left;
+	}
+	div.branche-popup div.branch-letters{
+		height: 45px;
+		margin: 10px 0px 10px 5px;
+		width:650px;
+	}
+		div.branche-popup div.branch-letters ul{
+			margin:0;
+			padding:0;
+		}
+			div.branche-popup div.branch-letters ul li{
+				display:inline;
+				height:20px;
+				width:35px;
+			}
+			div.branche-popup div.branch-letters ul li.selectedletter a{
+				background:#FFCC00;
+				color:#58595B;
+				font-weight:bold;
+			}
+				div.branche-popup div.branch-letters ul li a{
+					background:#595959;
+					color:#FFFFFF;
+					font-weight:bold;
+					display:block;
+					text-align:center;
+					height:15px;
+					width:25px;
+					float:left;
+					margin:0 10px 0 0;
+					padding:3px;
+				}
+
+/************************************************************************/
+/* CONTACT US FORM */
+/************************************************************************/
+
+form#contactUsForm{
+	margin:0;
+	padding:0;
+}
+
+	form#contactUsForm table.formElements{}	
+	
+		form#contactUsForm table.formElements td{}
+	
+		form#contactUsForm table.formElements td span.label{
+			font-weight:bold;
+		}	
+		
+		form#contactUsForm table.formElements td input.input-large{
+			width:300px;
+		}
+		form#contactUsForm table.formElements td input.input-small{
+			width:98px;
+		}
+		form#contactUsForm table.formElements td button.gwt-Button{
+			background:#0192d1;
+			border:1px solid #0192d1;
+			color:#ffffff;
+			font-weight:bold;
+			float:right;
+			height:22px;
+			cursor:pointer;
+		}
+		form#contactUsForm table.formElements td textarea.comments{
+			width:300px;
+		}
+		form#contactUsForm table.formElements td span.required-text{
+			font-size:10px;
+		}			
+		
+		
+/************************************************************************/
+/* Buy ad form                                                 */
+/************************************************************************/	
+
+div.layout-center-wide div.layout-center-text form.buy-ad{
+	margin:0;
+	padding:0;
+	width:525px;
+}
+	div.layout-center-wide div.layout-center-text form.buy-ad div.checkbox-block{
+		position: relative;
+		float:left;
+		width:205px;
+		margin:0 0 10px 0;
+	}
+		div.layout-center-wide div.layout-center-text form.buy-ad div.checkbox-block label{
+			float:left;
+			width:180px;height:20px;
+		}
+		div.layout-center-wide div.layout-center-text form.buy-ad div.checkbox-block input.check_btn{
+			float:left;
+			width:15px;
+			height:15px;
+			margin:0 10px 0 0;
+		}
+	div.layout-center-wide div.layout-center-text form.buy-ad label{
+		width:210px;
+		float:left;
+	}
+	div.layout-center-wide div.layout-center-text form.buy-ad input.small{
+		width:93px;
+	}
+	div.layout-center-wide div.layout-center-text form.buy-ad input.medium{
+		width:202px;
+	}
+	div.layout-center-wide div.layout-center-text form.buy-ad input.send{
+		width:68px;
+		height:28px;
+		float:right;
+	}
+	div.layout-center-wide div.layout-center-text form.buy-ad input{
+		width:305px;
+		margin:0 0 2px 0;
+	}
+	
+	div.layout-center-wide div.layout-center-text form.buy-ad textarea{
+		width:305px;
+		font-family:inherit;
+		font-size:13px;
+		margin:0 0 2px 0;
+	}
+	div.layout-center-wide div.layout-center-text form.buy-ad span.comments{
+		font-size:11px;
+	}
+		
+/************************************************************************/
+/* AddUpdate FORM */
+/************************************************************************/		
+
+form#addUpdateForm{
+	margin:0;
+	padding:0;
+}
+
+	form#addUpdateForm div.borderedBox{
+		border:1px solid #cccccc;
+		margin:0 0 20px 0;
+		width:585px;
+	}
+		form#addUpdateForm div.borderedBox span.gwt-RadioButton{
+			margin:0 15px 0 5px;
+		}
+	
+	form#addUpdateForm div.borderedBox div.explaintext{
+		color:#000000;
+		margin:5px 0 5px 10px;
+	}
+		form#addUpdateForm div.borderedBoxLabel{
+			font-weight:bold;
+			font-size:13px;
+			margin: 10px 10px 10px 10px;
+		}
+
+		form#addUpdateForm div.borderedBox table td{
+			margin:0 10px 0 10px;
+		}
+		
+			form#addUpdateForm div.borderedBox table td div.label{ }
+			
+				form#addUpdateForm div.borderedBox table td div.label{
+					font-weight:bold;
+					color:#000000;
+					width:300px;
+					display:block;
+				}
+				form#addUpdateForm  div.label{
+					font-weight:bold;
+					color:#000000;
+					display:inline;
+					margin:5px 5px 5px 10px;
+					width:300px;
+				}
+				form#addUpdateForm  div.label-small{
+					font-weight:bold;
+					color:#000000;
+					margin:0 0 0 6px;
+				}
+						
+				form#addUpdateForm div.borderedBox textarea.comments{
+					width:552px;
+					margin:0 0 5px 10px;
+				}
+				
+				span.label{
+					color:#000000;
+					font-weight:bold;
+					margin:0  5px 0 10px;
+					display:block;
+				}
+				form#addUpdateForm button.gwt-Button{
+					background:#0192d1;
+					border:1px solid #0192d1;
+					color:#ffffff;
+					font-weight:bold;
+					float:right;
+					height:22px;
+					cursor:pointer;
+				}
+				
+				form#addUpdateForm input.input-small{
+					width:67px;
+				}
+				form#addUpdateForm input.input-captcha{
+					width:107px;
+					margin:40px 0 0 0;
+				}
+				form#addUpdateForm input.input-medium{
+					width:242px;
+				}
+				form#addUpdateForm input.input-large{
+					width:242px;
+				}
+				form#addUpdateForm input.input-extra-large{
+					width:552px;
+					margin:5px 0 0 10px;
+				}
+				form#addUpdateForm td.required{
+					color:#FF0000;
+				}
+				form#addUpdateForm div.gwt-Label{
+					margin:0 0 0 10px;
+					font-style:italic;
+				}
+				
+button.choose-button{
+	background:none;
+	border:none;
+	color:#0192D1;
+	float:right;
+	cursor:pointer;
+	text-decoration:underline;
+}
+
+	button.choose-button:hover{
+		text-decoration:none;
+	}
+div.popupContent div.gwt-HTML{
+	background:#EEEEEE;
+	padding:5px;
+	border:1px solid #cccccc;
+}
+
+
+div.popup-anchor-list{
+	width:500px;
+	padding:10px 0 0 10px;
+}
+
+div.categoryBox{
+	padding:0 0 0 10px;
+}
+	div.popup-anchor-list ul{
+		margin:0;
+		padding:0;
+	}
+		div.popup-anchor-list ul li{
+			display:inline;
+			padding:0 0 0 3px;
+			border:1px solid #ffffff;
+		}
+		div.popup-anchor-list ul li.active{
+			display:inline;
+			padding:0 0 0 3px;
+			background:#FFCC00;
+			border:1px solid #cccccc;
+		}
+		
+		
+			div.popup-anchor-list ul li a{}
+
+
+div.categoryBox{
+	width:500px;
+	margin:15px 0 0 0;
+}
+
+div.branche-popup div.branche-results{}	
+#branch_results {margin-left:5px;}
+#branch_letters {height: 65px;margin: 10px 0px 10px 20px;}
+#branch_letters a {cursor:pointer;font: 12px Tahoma;font-weight: bold;color: #FFF; text-decoration:none;}
+#branch_letters a div {float:left; margin:2px 5px; width:24px; height:15px; background-color: #58595B; text-align:center; padding: 4px 0px; cursor:pointer;font: 12px Tahoma;font-weight: bold;color: #FFF; text-decoration:none;}
+#branch_letters a div.selectedletter {background-color: #FFCC00;color:#58595B;}
+.branch_table {margin-bottom:5px;}
+.branch_table td {border-right: 1px solid #ccc;}
+.branch_table td a {margin-left:10px;color:#0A3AA7;display:block;margin-bottom:4px;}
+.branch_table td br {display:block;height:2px;line-height:2px;}
+.branch_input {font: 8.25pt Tahoma; color:#000; line-height:18px; height:18px;}
+#branch_results #branch_paging {min-height:35px; height: 35px;}
+#branch_paging {margin: 10px 0px 5px 10px; min-height:65px;}
+.branchpaging {font: 8.25pt Tahoma; color:#595959; font-weight:bold;}
+#branch_paging .pgpages {margin-right: 10px; margin-top:5px;}
+#branch_paging .pgpages a {display:block; float:left; font: 8.25pt Tahoma; color:#0A3AA7; text-decoration: none; margin: 0px 4px;height:15px;}
+#branch_paging .pgpages div {float:left;margin: 0px 1px;background: url('/docroot/images/pgsel.gif') no-repeat center center; width:15px; height:15px; text-align:center;text-decoration: none; color: #fff;}
+.branch_desc {margin:8px;font-size:8.25pt;font-family:Tahoma;color: #595959;}
+.mapMenuBox {}
+.mapMenuBox table {padding: 0px;margin:0px;border-collapse:  collapse;}
+.mapMenuBox table tr {padding: 0px;margin:0px;}
+.mapMenuBox table td {border-bottom:1px solid #D2D1CF;padding:0px;padding: 0px;margin:0px;cell-spacing:0px;}
+.mapMenuBox table td.mapMenuLet {width:60px;background-color:#E7E7E7;color:#908D89;font-weight:bold; font-size:14px;font-family:Tahoma;text-align:right;padding:1px 6px 0px 0px;}
+
+
+
+/************************************************************************/
+/* netnummers page                                                      */
+/************************************************************************/	
+div.layout-center div.layout-center-text table.netnumbers{
+	border-color: #C6C6C6;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-collapse: separate;
+	width:460px;
+}
+	div.layout-center div.layout-center-text table.netnumbers tr th{
+		text-align:left;
+		background:#E5E5E5;	
+		border-color: #C6C6C6;
+  		border-width: 1px 1px 0 0 ;
+  		border-style: solid;
+		padding:3px;
+	}
+	div.layout-center div.layout-center-text table.netnumbers tr td{
+		text-align:left;
+		padding:3px;   
+		border-color: #C6C6C6;
+  	  	border-width: 1px 1px 0 0;
+    	border-style: solid;
+    	margin: 0;
+	}
+	div.layout-center div.layout-center-text table.netnumbers tr td.number{
+		font-weight:bold;
+		vertical-align:top;
+	}
+
+
+/************************************************************************/
+/* international page                                                      */
+/************************************************************************/	
+div.layout-right div.skyscraper{
+	border:1px solid #C6C6C6;
+	background:#E5E5E5;
+	margin-top:30px;
+	padding:5px 0 0 0;
+ 	width:130px;
+	min-height:620px;
+	height:auto !important;
+ 	height:620px;
+}
+div.layout-center div.layout-center-text h1.skyscraper{
+	margin:0;
+	padding:0;
+	height:30px;
+}
+
+div.layout-center div.layout-center-text table.internationial{
+	border-color: #C6C6C6;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-collapse: separate;
+	width:460px;
+}
+	div.layout-center div.layout-center-text table.internationial tr th{
+		text-align:left;
+		background:#E5E5E5;	
+		border-color: #C6C6C6;
+  		border-width: 1px 1px 0 0 ;
+  		border-style: solid;
+		padding:3px;
+	}
+	div.layout-center div.layout-center-text table.internationial tr td{
+		text-align:left;
+		padding:3px;   
+		border-color: #C6C6C6;
+  	  	border-width: 1px 1px 0 0;
+    	border-style: solid;
+    	margin: 0;
+	}
+	
+		div.layout-center div.layout-center-text table.internationial td.country{
+			font-weight:bold;
+		}
+		
+			div.layout-center div.layout-center-text table.internationial td a{
+				color:#000000;			
+				font-size:10px;
+			}
+			div.layout-center div.layout-center-text table.internationial td a:hover{
+				color:#000000;			
+			}
+/************************************************************************/
+/* presentshop page                                                      */
+/************************************************************************/	
+
+div.layout-center-wide div.layout-center-text div.presents-block{}	
+	div.layout-center-wide div.layout-center-text div.presents-block div.header-image{
+		background: url(/docroot/images/logo_cadeaushop.gif) no-repeat 0 0;
+		height:38px;
+		width:700px;
+		margin:0 0 10px 0;
+	}	
+div.layout-center-wide div.layout-center-text div.presents-block div.presents-text{
+	background:url(/docroot/images/bg_presentshop_left.gif) no-repeat 0 0;
+	float:left;
+	height:121px;
+	width:460px;
+}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-text h1{
+		font-size:1em;
+		margin:3px 0 0 5px;
+		padding:0;
+		float:none;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-text p{
+		padding:0 0 0 5px;
+		margin:0;
+	}
+div.layout-center-wide div.layout-center-text div.presents-block div.presents-images{
+	background:url(/docroot/images/bg_presentshop_right.gif) no-repeat 0 0;
+	float:left;
+	width:240px;
+	padding:5px 0 0 0;
+	height:121px;
+}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-images img{
+		padding: 0 0 0 30px;
+	}		
+div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block{
+	margin:20px 0 0 0;
+	background:transparent;
+}
+
+div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div{
+	float:left;
+}
+
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div h2{
+		color:#808080;
+		font-size:12px;
+		margin:0 0 3px 0;
+		padding:0;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads{
+		background:transparent url(/docroot/images/bg_presents_ads.gif) no-repeat 0 0;
+		float:left;
+		width:230px;
+		height:90px;
+		margin:0 3px 0 0;
+		font-size:11px;
+	}
+	
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads-end{
+		background:transparent url(/docroot/images/bg_presents_ads.gif) no-repeat 0 0;
+		float:left;
+		width:230px;
+		height:90px;
+		margin:0;
+		font-size:11px;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads-end p,
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads p{
+		float:left;
+		margin:0;
+		padding:3px 5px 0 5px;
+		width:140px;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads-end img,
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div div.presents-ads img{
+		float:left;
+		width:75px;
+		padding:8px 5px 0 0;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div a{
+		background:#E0E0E0;
+		display:block;
+		width:227px;
+		text-decoration:none;
+		padding:0 0 0 3px;
+		font-size:11px;
+		color:#000000;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div a:hover{
+		text-decoration:underline;
+		color:#000000;
+		
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div span.arrow{
+		color:#FF0000;
+		padding:0  3px 0 0;
+	}
+	div.layout-center-wide div.layout-center-text div.presents-block div.presents-ads-block div span.arrow a {
+		color:#000000;
+	}
+
+
+

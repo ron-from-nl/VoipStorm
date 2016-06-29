@@ -1,0 +1,59 @@
+#! /bin/bash
+echo
+echo "Removing Database"
+echo
+rm -Rfv  /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/data/databases/*
+echo
+echo "Removing ./dist/.. Database"
+echo
+#rm -Rfv  /Users/ron/Documents/NetBeansProjects/VoipStorm/dist/data/databases/*
+rm -Rfv  /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/dist/data/databases/*
+echo
+echo "Removing Logs"
+echo
+rm -Rfv  /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/data/log/*
+rm -Rfv  /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/dist/data/log/*
+echo
+echo "Copy data > ./dist/"
+echo
+rsync -av --progress --delete /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/data /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/dist/
+echo
+if [ ! -d /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm ]; then mkdir /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm; fi
+echo
+echo "Copy ./dist/. to voipstorm archive dir"
+echo
+rsync -av --progress --delete /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/dist/ /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm/
+echo
+echo "Remove Apple DS_Store"
+echo
+find /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm/ -name ".DS_Store" -delete
+echo
+echo "Remove NB README.TXT"
+echo
+find /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm/ -name "README.TXT" -delete
+echo
+echo "Copy VoipStorm Readme.html"
+echo
+cp -v /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/Readme.html /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm/
+echo
+echo "Remove Old VoipStorm Package"
+echo
+rm -v /Users/ron/voipstorm.jar
+echo
+echo "Move voipstorm to Home"
+echo
+rsync -av --progress --delete /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm /Users/ron/
+rm -Rfv /Users/ron/voipstorm/data/{databases,license,config,log}
+echo
+echo "Create VoipStorm Packge Zip Archive"
+echo
+java -jar /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/SEPRo.jar
+#zip -r /Users/ron/voipstorm.zip voipstorm
+echo
+echo "Removing ../VoipStorm/voipstorm Directory"
+echo
+rm -Rf /Users/ron/Documents/Dev/Oracle/Desktop\ Servlet/Java/Netbeans/VoipStorm/voipstorm/
+echo
+echo "Syncing Filesystem"
+echo
+sync

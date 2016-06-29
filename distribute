@@ -1,0 +1,8 @@
+echo
+echo "Bakcup to MacBook"
+echo
+rsync -av --progress --delete /Users/ron/NetBeansProjects rdjong@192.168.0.3:MacBook/
+echo
+echo "Sync package voipstorm"
+echo
+rsync -av --progress /Users/ron/voipstorm rdjong@192.168.0.3:/home/rdjong/

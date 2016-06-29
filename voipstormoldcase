@@ -1,0 +1,10 @@
+#! /bin/bash
+
+export destin=/Users/ron/voipstorm/
+
+rm -Rf $destin/data/log/*
+
+#cp license.xml $destin/data/license/
+
+cd $destin
+java -Xmx512m -client -jar VoipStorm.jar &
