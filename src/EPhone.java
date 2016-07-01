@@ -1,7 +1,7 @@
-import data.SpeakerData;
-import data.DisplayData;
-import data.Configuration;
-import data.Destination;
+import datasets.SpeakerData;
+import datasets.DisplayData;
+import datasets.Configuration;
+import datasets.Destination;
 import java.awt.Color;
 import java.util.Calendar;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package data;
+package datasets;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
