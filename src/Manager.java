@@ -29,14 +29,8 @@ import java.awt.Toolkit;
 import java.io.FileWriter;
 import java.io.File;
 import java.net.URL;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.UIManager;
 import org.jfree.chart.ChartPanel;
 
@@ -167,14 +161,14 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
     private Color               timeFieldColorQueueInactive;
     private Color               timeFieldColorQueueWaiting;
     private Color               timeFieldColorQueueRunning;
-    private FileBrowser         fileBrowser;
+    private final FileBrowser   fileBrowser;
     private boolean             platformIsNetManaged                            = true; // The CallCenter's NetManager should be working reliably (highly unreliable in Windows)
     private String              remoteJarURL                                    = "http://www.voipstorm.nl/VoipStorm.jar";
     private String              localJarURL                                     = "VoipStorm.jar";
     private Manager             managerReference;
     private VersionChecker      versionChecker                                  = null;
     private boolean             stopRequested                                   = false;
-    private String []           plaf;
+    private final String []     plaf;
     private String              plafSelected;
     private String              sysProp;
     private long                heapMemTot; // the amount of heapspace in use by JVM
@@ -183,8 +177,8 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
     private long                threads; // the amount of free mem this application has left
     private int                 smoothMovementPeriod                            = 40;
     private Vergunning          vergunning;
-    private DashboardMeter      callsPerHourMeter, busyRatioMeter, callDurationMeter, answerDelayMeter;
-    private ChartPanel          callsPerHourChartPanel, busyRatioChartPanel, callDurationChartPanel, answerDelayChartPanel;
+    private final DashboardMeter      callsPerHourMeter, busyRatioMeter, callDurationMeter, answerDelayMeter;
+    private final ChartPanel          callsPerHourChartPanel, busyRatioChartPanel, callDurationChartPanel, answerDelayChartPanel;
     private int                 dashboardMeterSize                              = 40;
     private boolean             moveCallsPerHourMeterIsLocked                   = false;
     private boolean             moveCPUMeterIsLocked                            = false;
@@ -212,16 +206,16 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
     private String              lineTerminator;
     private String              platform;
 
-    private String              logDateString;
+    private final String              logDateString;
     private int                 logFileSequence                                 = 1;
     private FileWriter          logFileWriter;
-    private String              logFileString;
+    private final String              logFileString;
     private String              logBuffer                                       = "";
 
     private int                 PHONESPOOLTABLECOLUMNWIDTH                      = 26;
     private int                 PHONESPOOLTABLECOLUMNHEIGHT                     = 16;
 
-    private Icons               icons;
+    private final Icons               icons;
     private SysMonitor          sysMonitor;
     private long                vmUsage;
 
@@ -250,7 +244,7 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
         threadExecutor = Executors.newCachedThreadPool();
 
         platform = System.getProperty("os.name").toLowerCase();
-        if ( platform.indexOf("windows") != -1 ) { fileSeparator = "\\"; lineTerminator = "\r\n"; } else { fileSeparator = "/"; lineTerminator = "\r\n"; }
+        if ( platform.contains("windows") ) { fileSeparator = "\\"; lineTerminator = "\r\n"; } else { fileSeparator = "/"; lineTerminator = "\r\n"; }
 
 	try
 	{
@@ -304,7 +298,7 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
         initComponents();
 
 //        if ( platform.indexOf("mac os x") != -1 ) { javaOptionsField.setText("-client -d32 -Xss2048"); }
-        if ( platform.indexOf("mac os x") != -1 ) { javaOptionsField.setText("-Xss2048k"); }
+        if ( platform.contains("mac os x") ) { javaOptionsField.setText("-Xss2048k"); }
 
         // Initiate the Manager Dashboard
         // Call Per Hour Meter
@@ -7175,7 +7169,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
     private void setLookAndFeel(int plafIndexParam)
     {
         plafSelected = plaf[plafIndexParam];
-        try { UIManager.setLookAndFeel(plafSelected); } catch (ClassNotFoundException ex) {} catch (InstantiationException ex) {} catch (IllegalAccessException ex) {} catch (UnsupportedLookAndFeelException ex) {}
+        try { UIManager.setLookAndFeel(plafSelected); } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {}
         setVisible(false); setVisible(true);
     }
 
@@ -7221,8 +7215,27 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
             }
             else if      (vergunningTypeList.getSelectedValue().equals("Enterprise"))
             {
-                vergunning.setVergunningType("Enterprise"); vergunning.setPhoneLines(vergunning.PHONELINES_ENTERPRISE); vergunning.setCallsPerHour(vergunning.CALLSPERHOUR_ENTERPRISE); vergunning.setMaxCalls(vergunning.MAXCALLS_ENTERPRISE); vergunning.setDestinationDigits(vergunning.DESTINATIONDIGITS_ENTERPRISE);
-                vergunningDetailsTable.setValueAt(vergunning.getVergunningType(), 1, 1);
+                vergunning.setVergunningType("Enterprise");
+		vergunning.setPhoneLines(vergunning.PHONELINES_ENTERPRISE);
+		vergunning.setCallsPerHour(vergunning.CALLSPERHOUR_ENTERPRISE);
+		vergunning.setMaxCalls(vergunning.MAXCALLS_ENTERPRISE);
+		vergunning.setDestinationDigits(vergunning.DESTINATIONDIGITS_ENTERPRISE);
+                
+		vergunningDetailsTable.setValueAt(vergunning.getVergunningType(), 1, 1);
+                vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getPhoneLines()), 5, 1);
+                vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getCallsPerHour()), 6, 1);
+                vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getMaxCalls()), 7, 1);
+                vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getDestinationDigits()), 8, 1);
+            }
+            else
+            {
+                vergunning.setVergunningType("Enterprise");
+		vergunning.setPhoneLines(vergunning.PHONELINES_ENTERPRISE);
+		vergunning.setCallsPerHour(vergunning.CALLSPERHOUR_ENTERPRISE);
+		vergunning.setMaxCalls(vergunning.MAXCALLS_ENTERPRISE);
+		vergunning.setDestinationDigits(vergunning.DESTINATIONDIGITS_ENTERPRISE);
+                
+		vergunningDetailsTable.setValueAt(vergunning.getVergunningType(), 1, 1);
                 vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getPhoneLines()), 5, 1);
                 vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getCallsPerHour()), 6, 1);
                 vergunningDetailsTable.setValueAt(Integer.toString(vergunning.getMaxCalls()), 7, 1);
@@ -7602,7 +7615,7 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
      *
      */
     @SuppressWarnings("static-access")
-    public void serviceTimeline()
+    public void serviceTimeline() // TimeLine Campain Manager
     {
         if (stopRequested ) { System.exit(0); }
 // Get, set and display Current Time
@@ -11007,70 +11020,16 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         updateDatabaseStatsThread.start();
     }
 
-    /**
-     *
-     * @return
-     */
     public static String getBrand()                             { return Vergunning.BRAND; }
-
-    /**
-     *
-     * @return
-     */
     public static String getBusiness()                          { return Vergunning.BUSINESS; }
-
-    /**
-     *
-     * @return
-     */
     public static String getBrandDescription()                  { return Vergunning.BRAND_DESCRIPTION; }
-
-    /**
-     *
-     * @return
-     */
     public static String getProduct()                           { return Vergunning.PRODUCT; }
-
-    /**
-     *
-     * @return
-     */
     public static String getWindowTitle()                       { return Vergunning.BRAND + " " + THISPRODUCT + " " + VERSION; }
-
-    /**
-     *
-     * @return
-     */
     public static String getProductDescription()                { return Vergunning.PRODUCT_DESCRIPTION; }
-
-    /**
-     *
-     * @return
-     */
     public static String getCopyright()                         { return Vergunning.COPYRIGHT; }
-
-    /**
-     *
-     * @return
-     */
     public static String getAuthor()                            { return Vergunning.AUTHOR; }
-
-    /**
-     *
-     * @return
-     */
     public static String getWarning()                           { return Vergunning.WARNING; }
-
-    /**
-     *
-     * @return
-     */
     public static String getVersion()                           { return VERSION; }
-
-    /**
-     *
-     * @param soundFileParam
-     */
     public void          setSoundFile(String soundFileParam)    { orderFilenameField.setText(soundFileParam); }
 
 //    public void showMessage(String messageParam)
@@ -11527,29 +11486,9 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
     private javax.swing.JLabel versionLabel;
     // End of variables declaration//GEN-END:variables
 
-    /**
-     *
-     */
-    @Override
-    public void resetLog() { textLogArea.setText(""); }
-
-    /**
-     *
-     * @param displayParam
-     */
-    @Override
-    public void phoneDisplay(DisplayData displayParam) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    /**
-     *
-     * @param speakerParam
-     */
-    @Override
-    public void speaker(SpeakerData speakerParam) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+    @Override public void resetLog() { textLogArea.setText(""); }
+    @Override public void phoneDisplay(DisplayData displayParam) { throw new UnsupportedOperationException("Not supported yet."); }
+    @Override public void speaker(SpeakerData speakerParam) { throw new UnsupportedOperationException("Not supported yet."); }
 
     /**
      *
