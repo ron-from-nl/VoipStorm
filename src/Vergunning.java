@@ -1,5 +1,4 @@
 import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.io.*;
 import java.net.NetworkInterface;
 import java.net.SocketException;
@@ -25,140 +24,33 @@ public class Vergunning implements Cloneable
     private static final int    WEEK                            = DAY    * 7;
     private static final int    YEAR                            = DAY    * 365;
 
-    /**
-     *
-     */
     public        final int     PHONELINES_DEMO                 = 500;
-
-    /**
-     *
-     */
-    public        final int     CALLSPERHOUR_DEMO               = 5000;
-
-    /**
-     *
-     */
-    public        final int     MAXCALLS_DEMO                   = 100;
-
-    /**
-     *
-     */
-    public        final int     DESTINATIONDIGITS_DEMO          = 100;
-
-    /**
-     *
-     */
-    public        final int     PHONELINES_STANDARD             = 500;
-
-    /**
-     *
-     */
-    public        final int     CALLSPERHOUR_STANDARD           = 1000;
-
-    /**
-     *
-     */
-    public        final int     MAXCALLS_STANDARD               = 10000;
-
-    /**
-     *
-     */
-    public        final int     DESTINATIONDIGITS_STANDARD      = 100;
-
-    /**
-     *
-     */
-    public        final int     PHONELINES_PROFESSIONAL         = 500;
-
-    /**
-     *
-     */
-    public        final int     CALLSPERHOUR_PROFESSIONAL       = 5000;
-
-    /**
-     *
-     */
-    public        final int     MAXCALLS_PROFESSIONAL           = 100000;
-
-    /**
-     *
-     */
-    public        final int     DESTINATIONDIGITS_PROFESSIONAL  = 100;
-
-    /**
-     *
-     */
-    public        final int     PHONELINES_ENTERPRISE           = 500;
-
-    /**
-     *
-     */
-    public static final int     CALLSPERHOUR_ENTERPRISE         = 20000;
-
-    /**
-     *
-     */
-    public        final int     MAXCALLS_ENTERPRISE             = 1000000000;
-
-    /**
-     *
-     */
-    public        final int     DESTINATIONDIGITS_ENTERPRISE    = 100;
-
-    /**
-     *
-     */
+    public        final int     CALLSPERHOUR_DEMO               = 20000; // 5000
+    public        final int     MAXCALLS_DEMO                   = 1000000000; // 100
+    public        final int     DESTINATIONDIGITS_DEMO          = 100; // 100
+    public        final int     PHONELINES_STANDARD             = 500; // 500
+    public        final int     CALLSPERHOUR_STANDARD           = 20000; // 1000
+    public        final int     MAXCALLS_STANDARD               = 1000000000; // 10000
+    public        final int     DESTINATIONDIGITS_STANDARD      = 100; // 100
+    public        final int     PHONELINES_PROFESSIONAL         = 500; // 500
+    public        final int     CALLSPERHOUR_PROFESSIONAL       = 20000; // 5000
+    public        final int     MAXCALLS_PROFESSIONAL           = 1000000000; //100000
+    public        final int     DESTINATIONDIGITS_PROFESSIONAL  = 100; // 100
+    public        final int     PHONELINES_ENTERPRISE           = 500; // 500
+    public static final int     CALLSPERHOUR_ENTERPRISE         = 20000; // 20000
+    public        final int     MAXCALLS_ENTERPRISE             = 1000000000; // 1000000000
+    public        final int     DESTINATIONDIGITS_ENTERPRISE    = 100; // 100
     public static final String BRAND                            = "VoipStorm";
-
-    /**
-     *
-     */
     public static final String BUSINESS                         = "Telemarketing";
-
-    /**
-     *
-     */
     public static final String BRAND_DESCRIPTION                = BRAND + " offers 21st Century TeleMarketing Software. Select a soundfile, copy and paste your phonenumbers and start a lightning fast Telephone Advertisement Campaign. TeleMarketing has never been so Fast and Easy at only a tiny Fraction of the costs of Traditional TeleMarketing channels like: CallCenters, Radio and TV !";
-
-    /**
-     *
-     */
     public static final String PRODUCT                          = "ECallCenter21";
-
-    /**
-     *
-     */
     public static final String VERSION                          = "v3.2";
-
-    /**
-     *
-     */
     public static final String PRODUCT_DESCRIPTION              = PRODUCT + " is the driving force behind " + BRAND + ". " + PRODUCT + " can make " + Vergunning.CALLSPERHOUR_ENTERPRISE + " Phonecalls per Hour, " + Math.round(Vergunning.CALLSPERHOUR_ENTERPRISE * 16 / 1000) + " thousand people hear your message in 16 Hours. " + Math.round(Vergunning.CALLSPERHOUR_ENTERPRISE * 24 * 365 / 1000000) + " million calls a year (non stop!)";
-
-    /**
-     *
-     */
-    public static final String WEBLINK                          = "http://www.voipstorm.nl/";
-
-    /**
-     *
-     */
-    public static final String REQUEST_VERGUNNINGLINK           = "http://www.voipstorm.nl:8080/en/";
+    public static final String WEBLINK                          = "https://sites.google.com/site/voipstorm2/";
+    public static final String REQUEST_VERGUNNINGLINK           = "https://sites.google.com/site/voipstorm2/";
     private static final String VERGUNNINGTOEKENNERTOEGANG      = "IsNwtNp4L";
-
-    /**
-     *
-     */
     public static final String WARNING                          = "Please use VoipStorm software carefully, responsibly and according your country's legislation.";
-
-    /**
-     *
-     */
     public static final String COPYRIGHT                        = "© " + Calendar.getInstance().get(Calendar.YEAR);
-
-    /**
-     *
-     */
     public static final String AUTHOR                           = "Ron de Jong";
 
     private boolean             debugging = false; // Check Object Weblog() for startup delays
@@ -201,12 +93,7 @@ public class Vergunning implements Cloneable
     DocumentBuilder builder = null;
     Document xmlDocument = null;
 
-    // a empty constructor
-
-    /**
-     *
-     */
-        public Vergunning()
+    public Vergunning()
     {
         xmlFileName                 = "";
         xmlFileBase                 = "license";
@@ -214,16 +101,16 @@ public class Vergunning implements Cloneable
         activationCodeFromFile      = "";
         vergunningCodeFromFile         = "";
         status                      = new String[2];
-        vergunningLoaded               = false;
-        vergunningValid                = false;
-        vergunningOrderInProgress      = false;
-        vergunningType                 = "";
-        vergunningPeriod               = "";
-        phoneLines                  = 0;
-//        callsPerHour                = CALLSPERHOUR_ENTERPRISE;
-        callsPerHour                = 0;
-        maxCalls                    = 0;
-        destinationDigits           = 0;
+        vergunningLoaded            = true;
+        vergunningValid             = true;
+        vergunningOrderInProgress   = false;
+        vergunningType              = "Enterprise";
+        vergunningPeriod            = "";
+        phoneLines                  = PHONELINES_ENTERPRISE;
+        callsPerHour                = CALLSPERHOUR_ENTERPRISE;
+//        callsPerHour                = 0;
+        maxCalls                    = MAXCALLS_ENTERPRISE;
+        destinationDigits           = DESTINATIONDIGITS_ENTERPRISE;
 
 //        status[0] = "0"; status[1]  = "";
 //        status = loadVergunning();
@@ -438,10 +325,11 @@ public class Vergunning implements Cloneable
 
             // vergunning Type gets determined
             vergunningType = activationCodeField[0];
-            if      ( vergunningType.equals("Demo"))           { phoneLines = PHONELINES_DEMO;         callsPerHour = CALLSPERHOUR_DEMO;           maxCalls = MAXCALLS_DEMO;           destinationDigits = DESTINATIONDIGITS_DEMO; }
-            else if ( vergunningType.equals("Standard"))       { phoneLines = PHONELINES_STANDARD;     callsPerHour = CALLSPERHOUR_STANDARD;       maxCalls = MAXCALLS_STANDARD;       destinationDigits = DESTINATIONDIGITS_STANDARD; }
-            else if ( vergunningType.equals("Professional"))   { phoneLines = PHONELINES_PROFESSIONAL; callsPerHour = CALLSPERHOUR_PROFESSIONAL;   maxCalls = MAXCALLS_PROFESSIONAL;   destinationDigits = DESTINATIONDIGITS_PROFESSIONAL; }
-            else if ( vergunningType.equals("Enterprise"))     { phoneLines = PHONELINES_ENTERPRISE;   callsPerHour = CALLSPERHOUR_ENTERPRISE;     maxCalls = MAXCALLS_ENTERPRISE;     destinationDigits = DESTINATIONDIGITS_ENTERPRISE; }
+            if      ( vergunningType.equals("Demo"))		{ phoneLines = PHONELINES_DEMO;         callsPerHour = CALLSPERHOUR_DEMO;           maxCalls = MAXCALLS_DEMO;           destinationDigits = DESTINATIONDIGITS_DEMO; }
+            else if ( vergunningType.equals("Standard"))	{ phoneLines = PHONELINES_STANDARD;     callsPerHour = CALLSPERHOUR_STANDARD;       maxCalls = MAXCALLS_STANDARD;       destinationDigits = DESTINATIONDIGITS_STANDARD; }
+            else if ( vergunningType.equals("Professional"))	{ phoneLines = PHONELINES_PROFESSIONAL; callsPerHour = CALLSPERHOUR_PROFESSIONAL;   maxCalls = MAXCALLS_PROFESSIONAL;   destinationDigits = DESTINATIONDIGITS_PROFESSIONAL; }
+            else if ( vergunningType.equals("Enterprise"))	{ phoneLines = PHONELINES_ENTERPRISE;   callsPerHour = CALLSPERHOUR_ENTERPRISE;     maxCalls = MAXCALLS_ENTERPRISE;     destinationDigits = DESTINATIONDIGITS_ENTERPRISE; }
+	    else						{ phoneLines = PHONELINES_ENTERPRISE;   callsPerHour = CALLSPERHOUR_ENTERPRISE;     maxCalls = MAXCALLS_ENTERPRISE;     destinationDigits = DESTINATIONDIGITS_ENTERPRISE; }
 
             // vergunning Period and therefore vergunning End Date get determined
             vergunningEndCalendar = Calendar.getInstance();
@@ -452,6 +340,7 @@ public class Vergunning implements Cloneable
             else if ( vergunningPeriod.equals("Week") )    { vergunningEndCalendar.add(Calendar.WEEK_OF_YEAR, 1); }
             else if ( vergunningPeriod.equals("Month") )   { vergunningEndCalendar.add(Calendar.MONTH, 1); }
             else if ( vergunningPeriod.equals("Year") )    { vergunningEndCalendar.add(Calendar.YEAR, 1); }
+            else					   { vergunningEndCalendar.add(Calendar.YEAR, 100); }
 
             // vergunning hardware id gets determined
             status = getAK();
@@ -516,7 +405,8 @@ public class Vergunning implements Cloneable
         }
         else
         {
-            vergunningLoaded = false;
+//            vergunningLoaded = false;
+            vergunningLoaded = true;
         }
 
         return vergunningValid;
@@ -622,94 +512,20 @@ public class Vergunning implements Cloneable
 
     // Just the getters and setters
 
-    /**
-     *
-     * @return
-     */
-        public boolean  isValid                     ()                             {return vergunningValid;}
-
-    /**
-     *
-     * @return
-     */
+    public boolean  isValid                     ()                             {return true;} // used to be return vergunningValid
     public String   getVergunningInvalidReason  ()                             {return vergunningInvalidReason;}
-
-    /**
-     *
-     * @return
-     */
     public String   getVergunningInvalidAdvise  ()                             {return vergunningInvalidAdvise;}
-
-    /**
-     *
-     * @return
-     */
     public boolean  vergunningOrderInProgress   ()                             {return vergunningOrderInProgress;}
-
-    /**
-     *
-     * @return
-     */
     public String   getActivationCode           ()                             {return activationCodeFromFile;}
-
-    /**
-     *
-     * @return
-     */
     public String   getVergunningCode           ()                             {return vergunningCodeFromFile;}
-
-    /**
-     *
-     * @return
-     */
     public String   getVergunningType           ()                             {return vergunningType;}
-
-    /**
-     *
-     * @return
-     */
     public Calendar getVergunningStartDate      ()                             {return vergunningStartCalendar;}
-
-    /**
-     *
-     * @return
-     */
     public Calendar getVergunningEndDate        ()                             {return vergunningEndCalendar;}
-
-    /**
-     *
-     * @return
-     */
     public String   getVergunningPeriod         ()                             {return vergunningPeriod;}
-
-    /**
-     *
-     * @return
-     */
     public int      getPhoneLines               ()                             {return phoneLines;}
-
-    /**
-     *
-     * @return
-     */
     public int      getCallsPerHour             ()                             {return callsPerHour;}
-
-    /**
-     *
-     * @return
-     */
     public int      getMaxCalls                 ()                             {return maxCalls;}
-
-    /**
-     *
-     * @return
-     */
     public int      getDestinationDigits        ()                             {return destinationDigits;}
-
-    /**
-     *
-     * @return
-     */
     public int      getOutboundBurstRate        ()
     {
         double outboundBurstRate = 0;
@@ -719,76 +535,17 @@ public class Vergunning implements Cloneable
         return (int) Math.round(outboundBurstRate);
     }
 
-    /**
-     *
-     * @param activationCodeParam
-     */
     public void setActivationCode               (String   activationCodeParam)              {activationCodeFromFile        = activationCodeParam;}
-
-    /**
-     *
-     * @param vergunningCodeParam
-     */
     public void setVergunningCode               (String   vergunningCodeParam)              {vergunningCodeFromFile        = vergunningCodeParam;}
-
-    /**
-     *
-     * @param vergunningValidParam
-     */
     public void setVergunningValid              (boolean  vergunningValidParam)             {vergunningValid               = vergunningValidParam;}
-
-    /**
-     *
-     * @param vergunningOrderInProgressParam
-     */
     public void setVergunningOrderInProgress    (boolean  vergunningOrderInProgressParam)   {vergunningOrderInProgress     = vergunningOrderInProgressParam;}
-
-    /**
-     *
-     * @param vergunningTypeParam
-     */
     public void setVergunningType               (String   vergunningTypeParam)              {vergunningType                = vergunningTypeParam;}
-
-    /**
-     *
-     * @param vergunningStartCalendarParam
-     */
     public void setVergunningStartDate          (Calendar vergunningStartCalendarParam)     {vergunningStartCalendar       = vergunningStartCalendarParam;}
-
-    /**
-     *
-     * @param vergunningEndCalendarParam
-     */
     public void setVergunningEndDate            (Calendar vergunningEndCalendarParam)       {vergunningEndCalendar         = vergunningEndCalendarParam;}
-
-    /**
-     *
-     * @param vergunningPeriodParam
-     */
     public void setVergunningPeriod             (String   vergunningPeriodParam)            {vergunningPeriod              = vergunningPeriodParam;}
-
-    /**
-     *
-     * @param phoneLinesParam
-     */
     public void setPhoneLines                   (int      phoneLinesParam)                  {phoneLines                    = phoneLinesParam;}
-
-    /**
-     *
-     * @param callsPerHourParam
-     */
     public void setCallsPerHour                 (int      callsPerHourParam)                {callsPerHour                  = callsPerHourParam;}
-
-    /**
-     *
-     * @param maxCallsParam
-     */
     public void setMaxCalls                     (int      maxCallsParam)                    {maxCalls                      = maxCallsParam;}
-
-    /**
-     *
-     * @param destinationDigitsParam
-     */
     public void setDestinationDigits            (int      destinationDigitsParam)           {destinationDigits             = destinationDigitsParam;}
 
     @Override

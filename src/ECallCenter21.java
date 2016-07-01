@@ -1097,6 +1097,7 @@ public class ECallCenter21 extends javax.swing.JFrame implements UserInterface
         vergunning.controleerVergunning();
 
         if (vergunning.isValid()) { vergunningDetailsTable.setValueAt("Yes", 0, 1); } else { vergunningDetailsTable.setValueAt("No", 0, 1); }
+	
         vergunningDetailsTable.setValueAt(vergunning.getVergunningType(), 1, 1);
         vergunningDetailsTable.setValueAt(vergunning.getVergunningPeriod(), 2, 1);
         vergunningDetailsTable.setValueAt(

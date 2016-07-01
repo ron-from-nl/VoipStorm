@@ -188,12 +188,7 @@ public class Call implements UserInterface
         file = new File(binDir);        if (!file.exists()) { if (new File(binDir).mkdir())         { System.out.println("Critical: Creating Directory: " + binDir); } }
         file = new File(logDir);        if (!file.exists()) { if (new File(logDir).mkdir())         { System.out.println("Info:     Creating Directory: " + logDir); } }
 
-        vergunning = new Vergunning();
-        vergunning.controleerVergunning();
-        if ( ! vergunning.isValid())
-        {
-            System.out.println("\r\tInvalid License, please order your license at http://www.voipstorm.nl/"); System.exit(0);
-        }
+//        vergunning = new Vergunning(); vergunning.controleerVergunning(); if ( ! vergunning.isValid()) { System.out.println("\r\tInvalid License, http://www.voipstorm.nl/"); System.exit(0); }
 
         audioTool   = new AudioTool();
 
