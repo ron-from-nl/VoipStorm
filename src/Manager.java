@@ -248,28 +248,29 @@ public class Manager extends javax.swing.JFrame implements UserInterface {
 
 	try
 	{
-	    //        dataDir = "data" + fileSeparator;
-//        soundsDir = dataDir + "sounds" + fileSeparator;
-//        vergunningDir = dataDir + "license" + fileSeparator;
-//        databasesDir = dataDir + "databases" + fileSeparator;
-//        configDir = dataDir + "config" + fileSeparator;
-//        binDir = dataDir + "bin" + fileSeparator;
-//        logDir = dataDir + "log" + fileSeparator;
+        dataDir = "data" + fileSeparator;
+        soundsDir = dataDir + "sounds" + fileSeparator;
+        vergunningDir = dataDir + "license" + fileSeparator;
+        databasesDir = dataDir + "databases" + fileSeparator;
+        configDir = dataDir + "config" + fileSeparator;
+        binDir = dataDir + "bin" + fileSeparator;
+        logDir = dataDir + "log" + fileSeparator;
 //
-////        System.out.println("\r\nChecking Directories...");
-//        boolean missingDirsDetected = false;
-//        boolean missingCriticalDirsDetected = false;
-//        file = new File(dataDir);       if (!file.exists()) { if (new File(dataDir).mkdir())        { missingDirsDetected = true; System.out.println("Warning:  Creating missing directory: " + dataDir); } }
-//        file = new File(soundsDir);     if (!file.exists()) { if (new File(soundsDir).mkdir())      { missingDirsDetected = true; System.out.println("Critical: Creating missing directory: " + soundsDir); missingCriticalDirsDetected = true; } }
-//        file = new File(vergunningDir);    if (!file.exists()) { if (new File(vergunningDir).mkdir())     { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + vergunningDir); } }
-//        file = new File(databasesDir);  if (!file.exists()) { if (new File(databasesDir).mkdir())   { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + databasesDir); } }
-//        file = new File(configDir);     if (!file.exists()) { if (new File(configDir).mkdir())      { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + configDir); } }
-//        file = new File(binDir);        if (!file.exists()) { if (new File(binDir).mkdir())         { missingDirsDetected = true; System.out.println("Critical: Creating missing directory: " + binDir); missingCriticalDirsDetected = true; } }
-//        file = new File(logDir);        if (!file.exists()) { if (new File(logDir).mkdir())         { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + logDir); } }
-//        if ( missingCriticalDirsDetected )  { System.out.println("Critical directories were missing!!! Please download the entire VoipStorm package at: " + Vergunning.WEBLINK); try { Thread.sleep(4000); } catch (InterruptedException ex) { } }
-//        if ( missingDirsDetected )          {System.out.println("VoipStorm directory structure built"); try { Thread.sleep(1000); } catch (InterruptedException ex) { } }
+	MyNIO.copyTree(MyNIO.getJarFS().getPath("data"),MyNIO.getUserDir()); } catch (IOException ex)	{ System.err.println("Error: MyNIO.copyTree(MyNIO.getJarFS().getPath(\"data\"),MyNIO.getUserDir()); " + ex.getMessage()); }
+
+//        System.out.println("\r\nChecking Directories...");
+        boolean missingDirsDetected = false;
+        boolean missingCriticalDirsDetected = false;
+        file = new File(dataDir);       if (!file.exists()) { if (new File(dataDir).mkdir())        { missingDirsDetected = true; System.out.println("Warning:  Creating missing directory: " + dataDir); } }
+        file = new File(soundsDir);     if (!file.exists()) { if (new File(soundsDir).mkdir())      { missingDirsDetected = true; System.out.println("Critical: Creating missing directory: " + soundsDir); missingCriticalDirsDetected = true; } }
+        file = new File(vergunningDir); if (!file.exists()) { if (new File(vergunningDir).mkdir())  { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + vergunningDir); } }
+        file = new File(databasesDir);  if (!file.exists()) { if (new File(databasesDir).mkdir())   { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + databasesDir); } }
+        file = new File(configDir);     if (!file.exists()) { if (new File(configDir).mkdir())      { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + configDir); } }
+        file = new File(binDir);        if (!file.exists()) { if (new File(binDir).mkdir())         { missingDirsDetected = true; System.out.println("Critical: Creating missing directory: " + binDir); missingCriticalDirsDetected = true; } }
+        file = new File(logDir);        if (!file.exists()) { if (new File(logDir).mkdir())         { missingDirsDetected = true; System.out.println("Info:     Creating missing directory: " + logDir); } }
+        if ( missingCriticalDirsDetected )  { System.out.println("Critical directories were missing!!! Please download the entire VoipStorm package at: " + Vergunning.WEBLINK); try { Thread.sleep(4000); } catch (InterruptedException ex) { } }
+        if ( missingDirsDetected )          {System.out.println("VoipStorm directory structure built"); try { Thread.sleep(1000); } catch (InterruptedException ex) { } }
 	    
-	  MyNIO.copyTree(MyNIO.getJarFS().getPath("data"),MyNIO.getUserDir()); } catch (IOException ex)	{  }
         try { weblog = new WebLog(); } catch (Exception ex) { }
 
         currentTimeCalendar = Calendar.getInstance();

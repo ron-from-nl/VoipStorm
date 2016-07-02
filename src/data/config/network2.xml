@@ -7,8 +7,8 @@
 <serverIP>sip1.budgetphone.nl</serverIP>
 <serverPort>5060</serverPort>
 <prefPhoneLines>500</prefPhoneLines>
-<username></username>
-<password></password>
+<username>user</username>
+<password>pass</password>
 <register>0</register>
 <icons>1</icons>
 </softphoneconfiguration>

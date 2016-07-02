@@ -1,8 +1,8 @@
 <softphoneconfiguration>
 <!--SoftPhone Configuration-->
 <domain>sip1.budgetphone.nl</domain>
-<clientIP>192.168.0.105</clientIP>
-<pubIP>192.168.0.105</pubIP>
+<clientIP></clientIP>
+<pubIP></pubIP>
 <clientPort>auto</clientPort>
 <serverIP>sip1.budgetphone.nl</serverIP>
 <serverPort>5060</serverPort>
