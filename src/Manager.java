@@ -9660,8 +9660,11 @@ vergunningDateChooserPanel.addSelectionChangedListener(new datechooser.events.Se
         configurationCallCenter.setRegister("1");
         if (registerCheckBox.isSelected()) {configurationCallCenter.setRegister("1");} else {configurationCallCenter.setRegister("0");}
         if (iconsCheckBox.isSelected()) {configurationCallCenter.setIcons("1");} else {configurationCallCenter.setIcons("0");}
+        configurationCallCenter.saveConfiguration("1");
+        configurationCallCenter.saveConfiguration("2");
         configurationCallCenter.saveConfiguration("3");
         configurationCallCenter.loadConfiguration("3");
+//	System.out.println(configurationCallCenter.toString());
 
         if
         (
