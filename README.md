@@ -12,3 +12,8 @@ VoipStorm SoftPhone:  The actual VOIP SoftPhone calling the recipient and delive
 
 VoipStorm is based on SIP/SDP & RTSP communication and requires a subscription to a VOIP Gateway Provider like Verizon
 to convert to real phone calls to non VOIP based / regular telephones like landlines and cellular phones.
+
+You'll find the necessary libraries in the "libs" directory
+
+This software was developed with: JDK 8u91 with NetBeans 8.1
+http://www.oracle.com/technetwork/articles/javase/jdk-netbeans-jsp-142931.html
