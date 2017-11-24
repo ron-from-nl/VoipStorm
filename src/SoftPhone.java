@@ -40,125 +40,30 @@ public class SoftPhone extends Thread implements SipListener
     private String contact;  // sip:usr@1.2.3.4 (pub ip)
 //    private String sipStackName;
 
-    /**
-     *
-     */
     public int sipstate;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_OFF                        = 0;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_ON                         = 1;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_IDLE                       = 2;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_WAIT_CONNECT               = 3; // Sent out invite
-
-    /**
-     *
-     */
     public static final int SIPSTATE_WAIT_PROV                  = 4; // Received Trying
-
-    /**
-     *
-     */
     public static final int SIPSTATE_WAIT_FINAL                 = 5; // Received Ringing
-
-    /**
-     *
-     */
     public static final int SIPSTATE_WAIT_ACK                   = 6; // Happens in createResponse picking up phone sending OK back
-
-    /**
-     *
-     */
     public static final int SIPSTATE_RINGING                    = 7; // Happens in processResponse 100 - 179
-
-    /**
-     *
-     */
     public static final int SIPSTATE_ESTABLISHED                = 8;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_LOCALCANCEL     = 9;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_REMOTECANCEL    = 10;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_LOCALBUSY       = 11;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_REMOTEBUSY      = 12;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_LOCALBYE        = 13;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_REMOTEBYE       = 14;
-
-    /**
-     *
-     */
     public static final int SIPSTATE_TRANSITION_CONFIG          = 15;
-
-    /**
-     *
-     */
     public static final String[] SIPSTATE_DESCRIPTION           = {"SIPSTATE_OFF","SIPSTATE_ON","SIPSTATE_IDLE","SIPSTATE_WAIT_PROV","SIPSTATE_WAIT_FINAL","SIPSTATE_WAIT_ACK","SIPSTATE_RINGING","SIPSTATE_ESTABLISHED","SIPSTATE_TRANSITION_LOCALCANCEL",
                                                                    "SIPSTATE_TRANSITION_REMOTECANCEL","SIPSTATE_TRANSITION_LOCALBUSY","SIPSTATE_TRANSITION_REMOTEBUSY","SIPSTATE_TRANSITION_LOCALBYE","SIPSTATE_TRANSITION_REMOTEBYE","SIPSTATE_TRANSITION_CONFIG"};
-
-    /**
-     *
-     */
     public static final int SOFTPHONE_ACTIVITY_NORMAL           = 0;
-
-    /**
-     *
-     */
     public static final int SOFTPHONE_ACTIVITY_REGISTRATION     = 1;
-
-    /**
-     *
-     */
     public static final int SOFTPHONE_ACTIVITY_MAINTENANCE      = 2;
-
-    /**
-     *
-     */
     public static final int SOFTPHONE_ACTIVITY_REFRESH          = 3;
-
-    /**
-     *
-     */
     public static final int LOGINSTATE_UNREGISTERED             = 0;
-
-    /**
-     *
-     */
     public static final int LOGINSTATE_REGISTERED               = 1;
 
     private       final int PRIORITY_LOW                        = 5;
@@ -167,39 +72,12 @@ public class SoftPhone extends Thread implements SipListener
     private static final int    CALLING             = 0;
     private static final int    SCANNING            = 1;
 
-    /**
-     *
-     */
     public int lastsipstate;
-
-    /**
-     *
-     */
     public int loginstate; // UNREGISTERED, REGISTERING, REGISTERED
-
-    /**
-     *
-     */
     public int lastloginstate; // UNREGISTERED, REGISTERING, REGISTERED
-
-    /**
-     *
-     */
     public String availability = "Unavailable"; // UNREGISTERED, REGISTERING, REGISTERED
-
-    /**
-     *
-     */
     public String registered = "Ready"; // UNREGISTERED, REGISTERING, REGISTERED
-
-    /**
-     *
-     */
     public String unregistered = "Callout"; // UNREGISTERED, REGISTERING, REGISTERED
-
-    /**
-     *
-     */
     public String off = "Off"; // UNREGISTERED, REGISTERING, REGISTERED
     private int localSIPPort;
     private int requestedClientAudioPort;
@@ -221,9 +99,6 @@ public class SoftPhone extends Thread implements SipListener
     private int eyeBlinkMessagePeriod;
     private int shortMessagePeriod;
 
-    /**
-     *
-     */
     public int registerRequestCounter           = 1; // Keep this one global for now !!!
     private int audioCodec                    = 3;
     private int videoPort                     = -1; // Means that video will not be used
@@ -313,23 +188,14 @@ public class SoftPhone extends Thread implements SipListener
     private ServerTransaction           serverTransaction; // Keep global to just like clientTransaction
     private Dialog                      dialog; // Keep global to
 
-    /**
-     *
-     */
     public  SoundStreamer               soundStreamer; // Keep Global, through different methods the SoundStreamer is used switching between several (update) stages (Invite and Call acceptance in the processResponse method and enableMute method)
 //    private VideoTool myVideoTool;
 
     private boolean                     debugging                   = false; // Certainly keep Global
     private int                         debugginglevel; // Keep Global
 
-    /**
-     *
-     */
     public  boolean                     autoEndCall                 = false; // Keep Global, the constructor sets it and processRequest
 
-    /**
-     *
-     */
     public  int                         autoRingingResponse; // Keep Global, the constructor sets it and processRequest
     private final int                   NONE = 0; // Keep Global, the constructor sets it and processRequest
     private final int                   ANSWER = 1; // Keep Global, the constructor sets it and processRequest
@@ -340,21 +206,12 @@ public class SoftPhone extends Thread implements SipListener
     private int                         inboundEndTimerDelay; // Keep Global, the constructor sets it and processRequest
 //    private int                         outboundEndTimerDelay        = 0; // Keep Global, the constructor sets it and processRequest
 
-    /**
-     *
-     */
-        public  boolean                     audioIsMuted      = false; // Keep Global
+    public  boolean                     audioIsMuted      = false; // Keep Global
     private UserInterface               userInterface1, userInterface2; // KEEP GLOBAL!!! userInterface1 = EPhoneGUI, userInterface2 = ECallCenterGUI
     private int                         softPhoneInstanceId; // KEEP GLOBAL!!!
 
-    /**
-     *
-     */
     public  Configuration               configuration; // KEEP EVEN MORE GLOBAL!!!
 
-    /**
-     *
-     */
     public  String                      activeLineNumber; // Keep Global, Tricky one, this is not spread accross several methods, but just one method that gets set differently on different occations, one occation sets it and another occation uses it (line1-power & saveConfig)
     private String                      fromHeaderAddress; // Keep Global
     private String                      toHeaderAddress; // Keep Global

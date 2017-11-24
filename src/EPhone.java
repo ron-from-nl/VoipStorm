@@ -15,7 +15,8 @@ import java.io.File;
  *
  * @author ron
  */
-public class EPhone extends javax.swing.JFrame implements UserInterface {
+public class EPhone extends javax.swing.JFrame implements UserInterface
+{
 
     SoftPhone softPhone1 = null;
 

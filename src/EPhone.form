@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
@@ -19,6 +19,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <Events>
     <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="formKeyTyped"/>
@@ -260,7 +261,6 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder justification="2">
                       <Font PropertyName="font" name="STHeiti" size="12" style="0"/>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
                     </TitledBorder>
                   </Border>
                 </Property>
@@ -273,15 +273,13 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="filenameField" alignment="1" pref="198" max="32767" attributes="1"/>
+                              <Component id="filenameField" alignment="1" max="32767" attributes="1"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="button7" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
-                                              <Component id="button4" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
-                                              <Component id="button1" linkSize="27" alignment="1" min="-2" pref="62" max="-2" attributes="1"/>
-                                          </Group>
+                                          <Component id="button7" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
+                                          <Component id="button4" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
+                                          <Component id="button1" linkSize="27" alignment="1" min="-2" pref="62" max="-2" attributes="1"/>
                                           <Component id="buttonStar" linkSize="27" alignment="0" min="-2" pref="62" max="-2" attributes="1"/>
                                       </Group>
                                       <Component id="callButton" linkSize="27" alignment="0" min="-2" pref="62" max="-2" attributes="1"/>
@@ -290,11 +288,9 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                           <Component id="button0" linkSize="27" alignment="0" min="-2" pref="52" max="-2" attributes="1"/>
-                                          <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="button8" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
-                                              <Component id="button5" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
-                                              <Component id="button2" linkSize="27" alignment="1" min="-2" pref="52" max="-2" attributes="1"/>
-                                          </Group>
+                                          <Component id="button8" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
+                                          <Component id="button5" linkSize="27" alignment="1" min="0" pref="0" max="32767" attributes="1"/>
+                                          <Component id="button2" linkSize="27" alignment="1" min="-2" pref="52" max="-2" attributes="1"/>
                                       </Group>
                                       <Component id="poolButton" linkSize="27" alignment="0" min="-2" pref="52" max="-2" attributes="1"/>
                                   </Group>
@@ -873,7 +869,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                                  <EmptySpace pref="18" max="32767" attributes="0"/>
                                   <Component id="onLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -918,7 +914,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
                                   <Component id="idleLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -965,7 +961,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="connectingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1010,7 +1006,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="callingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                                  <EmptySpace pref="14" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1053,7 +1049,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                                   <Component id="ringingLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1100,7 +1096,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="acceptingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1190,7 +1186,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="registeredLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1235,7 +1231,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="answerLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="10" max="32767" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1280,7 +1276,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cancelLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1325,7 +1321,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="muteLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1359,7 +1355,6 @@
                   <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
                     <TitledBorder justification="2">
                       <Font PropertyName="font" name="STHeiti" size="12" style="0"/>
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
                     </TitledBorder>
                   </Border>
                 </Property>
@@ -1456,7 +1451,6 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="lookAndFeelRButtonMotif" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="lookAndFeelRButtonGTK" alignment="0" min="-2" max="-2" attributes="0"/>
