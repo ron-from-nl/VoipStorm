@@ -80,7 +80,7 @@
                   <Component id="tabPanel" min="-2" pref="291" max="-2" attributes="1"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="telephonePanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -694,13 +694,13 @@
                           <Group type="102" attributes="0">
                               <Component id="softphoneInfoLabel" min="-2" pref="245" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="proxyInfoLabel" pref="249" max="32767" attributes="0"/>
+                              <Component id="proxyInfoLabel" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
-                          <Component id="primaryStatusLabel" alignment="0" pref="506" max="32767" attributes="1"/>
-                          <Component id="primaryStatusDetailsLabel" alignment="0" pref="506" max="32767" attributes="1"/>
-                          <Component id="secondaryStatusLabel" alignment="0" pref="506" max="32767" attributes="1"/>
-                          <Component id="secondaryStatusDetailsLabel" alignment="0" pref="506" max="32767" attributes="1"/>
+                          <Component id="primaryStatusLabel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="primaryStatusDetailsLabel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="secondaryStatusLabel" alignment="0" max="32767" attributes="1"/>
+                          <Component id="secondaryStatusDetailsLabel" alignment="0" max="32767" attributes="1"/>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="onPanel" linkSize="36" min="-2" max="-2" attributes="0"/>
@@ -724,7 +724,7 @@
                               <Component id="cancelPanel" linkSize="36" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="mutePanel" linkSize="36" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="40" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -869,7 +869,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <EmptySpace pref="22" max="32767" attributes="0"/>
                                   <Component id="onLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -914,7 +914,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="17" max="32767" attributes="0"/>
+                                  <EmptySpace pref="21" max="32767" attributes="0"/>
                                   <Component id="idleLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -961,7 +961,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="connectingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1006,7 +1006,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="callingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace pref="18" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1049,7 +1049,7 @@
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                                   <Component id="ringingLabel" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
@@ -1096,7 +1096,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="acceptingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1141,7 +1141,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="talkingLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="8" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1186,7 +1186,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="registeredLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1231,7 +1231,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="answerLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1276,7 +1276,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cancelLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1321,7 +1321,7 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="muteLabel" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1524,7 +1524,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
                                           <Component id="registerLabel" min="-2" max="-2" attributes="1"/>
-                                          <Component id="registerCheckBox" min="0" pref="0" max="32767" attributes="1"/>
+                                          <Component id="registerCheckBox" min="0" pref="17" max="32767" attributes="1"/>
                                           <Component id="saveProxyConfigButton" min="-2" pref="13" max="-2" attributes="1"/>
                                       </Group>
                                   </Group>
