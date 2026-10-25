@@ -1,6 +1,6 @@
 # VoipStorm Telemarketing
 
-Have a quick look here to get a feeling: https://sites.google.com/site/voipstorm2/
+Have a quick look here to get a feeling: [https://sites.google.com/site/voipstorm2/](https://www.tiny-server.org/ron/voipstorm/)
 
 Voipstorm is fast telemarketing / voicemessenger delivering up to 20,000 phone-messages per hour from your desktop.
 
